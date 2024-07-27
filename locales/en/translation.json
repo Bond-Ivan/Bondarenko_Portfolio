@@ -1,0 +1,98 @@
+{
+    "info": {
+        "title": "Nice to meet you!",
+        "description": "Welcome to my digital world! Hello! My name is Ivan Bondarenko, and I am a front-end developer, passionate about creating aesthetically pleasing and functionally rich web applications."
+    },
+    "about": {
+        "title": "About me",
+        "description": "I am a front-end developer with a deep understanding of web development fundamentals and modern technologies. My journey began with learning HTML, CSS and JavaScript, which allowed me to build a strong foundation for further professional growth. Since then, I have steadily expanded my knowledge and skills, mastering tools such as React, TypeScript and Redux, as well as learning the principles of reactive programming and the component-based approach to front-end development. With every new project, I strive to create websites that are not only functional, but also visually appealing. My work is characterized by clean code, optimized performance, and responsiveness to different devices and browsers. I pay great attention to detail and user experience to ensure that each site is not only beautiful, but also intuitive and user-friendly."
+    },
+    "activity": {
+        "title": "Experience",
+        "firstItem": {
+            "position": "Frontend Developer",
+            "place": "Raiffeisenbank",
+            "duty1": "Creating new components and refining existing ones on React and TypeScript",
+            "duty2": "Working with metrics",
+            "duty3": "Writing e2e tests",
+            "duty4": "Layout of HMTL emails",
+            "time": "01.04.2024 - Today"
+        },
+        "secondItem": {
+            "position": "QA Engineer",
+            "place": "Банк ДОМ РФ",
+            "duty1": "Manual testing",
+            "duty2": "Creating test cases",
+            "duty3": "Testing the Frontend part of the platform",
+            "time": "01.02.2024 - 01.04.2024"
+        },
+        "thirdItem": {
+            "position": "SQL Tutor",
+            "place": "Freelance",
+            "duty1": "Completing coursework and various SQL tasks",
+            "time": "22.09.2022 - 22.09.2023"
+        }
+    },
+    "stack": {
+        "title": "My Stack",
+        "text": "My technologies",
+        "description": "Below is a list of technologies that I own"
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "Examples of my projects",
+        "firstItem": {
+            "description": "FOIL Network website - technology for identity verification in the field of cryptocurrency",
+            "title": "Cripto-Project"
+        },
+        "secondItem": {
+            "description": "Modern trading platform with smart trades and bots",
+            "title": "Capioco"
+        },
+        "thirdItem": {
+            "description": "Informative website with santa - party invitation",
+            "title": "Prepare-a-sleigh"
+        },
+        "card": {
+            "technology": "Technology",
+            "gallery": "Gallery",
+            "link": {
+                "description": "You can view the entire site using the button below.",
+                "content": "Familiarize"
+            },
+            "firstItem": {
+                "description": "FOIL Network website - identity verification technology in the field of cryptocurrencies. This project was implemented using development tools such as HTML, SCSS preprocessor, JavaScript. The Gulp project builder was used. The project is made in colorful colors and tones that go well with the content on the site. It looks modern and is certainly pleasing to the eye."
+            },
+            "secondItem": {
+                "description": "Modern trading platform with smart trades and bots. This site was implemented using technologies such as Gulp collector, HTML, CSS and SCSS preprocessor. It combines rigor and style, made in modern colors. The site has many beautiful and easy-to-use carousels that make the site especially comfortable to use."
+            },
+            "thirdItem": {
+                "description": "Informative site with an invitation to Santa's party. This site is designed in the `Carousel` style - each page is a separate semantic page. The site is implemented using technologies such as HTML, CSS, SCSS preprocessor, JavaScript, and the Gulp project builder. The site is entertaining in nature and has specific content and text."
+            }
+        }
+    },
+    "contacts": {
+        "title": "Contacts",
+        "description": "You can send your suggestions or wishes by filling out the form below. You can also write in instant messengers, which will also be listed below. And I will continue to make cool and user-friendly sites and applications.",
+        "form": {
+            "title": "For feedback",
+            "labelName": "Name",
+            "labelEmail": "Email",
+            "labelMessage": "Message"
+        }
+    },
+    "sideBar": {
+        "home": "Home",
+        "about": "About me",
+        "activity": "Experience",
+        "stack": "Stack",
+        "projects": "Projects",
+        "contacts": "Contacts"
+    },
+
+    "button": {
+        "open": "Open",
+        "submit": "Submit",
+        "back": "To main"
+    }
+}
