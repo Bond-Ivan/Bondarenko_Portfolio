@@ -6,11 +6,12 @@ import {
 import { useParams } from "react-router-dom";
 import ProjectCardDataType from "../ProjectCard.types";
 import projectData from "../../../unitls/projectCardData";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const ProjectCardGallery = (): ReactElement => {
     const { projectId } = useParams();
     const project = projectData[projectId as keyof ProjectCardDataType];
+    const { t } = useTranslation();
 
     return (
         <ProjectCardGallerySection>

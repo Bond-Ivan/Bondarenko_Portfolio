@@ -1,9 +1,11 @@
-import { t } from "i18next";
 import { ReactElement } from "react";
 import { StackList, StackItem, StackItemIcon, StackItemTitle } from "../../Main/Stack/Stack.styled";
 import { ProjectCarTechnologydSection, ProjectCardTechnologyContainer, ProjectCardTechnologyTitle } from "./ProjectCardTechnology.styled";
+import { useTranslation } from "react-i18next";
 
 const ProjectCardTechnology = (): ReactElement => {
+    const { t } = useTranslation();
+
     return (
         <ProjectCarTechnologydSection>
             <ProjectCardTechnologyContainer>

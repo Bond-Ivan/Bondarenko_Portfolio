@@ -8,11 +8,12 @@ import {
 import ProjectCardDataType from "../ProjectCard.types";
 import projectData from "../../../unitls/projectCardData";
 import { Link, useParams } from "react-router-dom";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const ProjectCardInfo = (): ReactElement => {
     const { projectId } = useParams();
     const project = projectData[projectId as keyof ProjectCardDataType];
+    const { t } = useTranslation();
 
     return (
         <ProjectCardInfoSection>
