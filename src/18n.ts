@@ -12,7 +12,7 @@ i18n
     fallbackLng: "ru",
     debug: true,
     backend: {
-      loadPath: "locales/{{lng}}/{{ns}}.json",
+      loadPath: "Bondarenko_Portfolio/locales/{{lng}}/{{ns}}.json",
     },
     react: {
       useSuspense: true,
