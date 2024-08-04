@@ -5,7 +5,7 @@ import HeaderProps from "./Header.types";
 
 function Header({ toggleTheme }: HeaderProps): ReactElement {
     const [active, setActive] = useState(false);
-    const [selected, setSelected] = useState('ru');
+    const [selected, setSelected] = useState(localStorage.getItem('i18nextLng') || 'ru');
 
     const toggleDropdown = () => {
         setActive(!active);
@@ -19,7 +19,9 @@ function Header({ toggleTheme }: HeaderProps): ReactElement {
     const { i18n } = useTranslation()
     const changelanguage = (language: string) => {
         i18n.changeLanguage(language);
+        localStorage.setItem('i18nextLng', language);
     };
+
 
     return (
         <HeaderContainer>
