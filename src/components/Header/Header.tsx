@@ -22,7 +22,6 @@ function Header({ toggleTheme }: HeaderProps): ReactElement {
         localStorage.setItem('i18nextLng', language);
     };
 
-
     return (
         <HeaderContainer>
             <HeaderWrapper>

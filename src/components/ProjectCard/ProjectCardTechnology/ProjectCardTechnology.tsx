@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { StackList, StackItem, StackItemIcon, StackItemTitle } from "../../Main/Stack/Stack.styled";
+import { StackList, StyledStackItem as StackItem, StackItemIcon, StackItemTitle } from "../../Main/Stack/Stack.styled";
 import { ProjectCarTechnologydSection, ProjectCardTechnologyContainer, ProjectCardTechnologyTitle } from "./ProjectCardTechnology.styled";
 import { useTranslation } from "react-i18next";
 

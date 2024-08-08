@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const ActivitySection = styled.section`
@@ -5,8 +6,10 @@ const ActivitySection = styled.section`
   background-color: ${(props) => props.theme.background};
   border-bottom: 5px solid #ffb500;
 `;
+const StyledActivitySection = motion(ActivitySection);
 
 const ActivityContainer = styled.div`
+  overflow: hidden;
   margin: 0 auto;
   max-width: 1920px;
   padding: 110px 70px 125px 125px;
@@ -99,8 +102,8 @@ const ActivityBox = styled.div`
 
   @media (max-width: 576px) {
     &:hover {
-    scale: 1;
-  }
+      scale: 1;
+    }
   }
 `;
 
@@ -182,9 +185,10 @@ const ActivityTime = styled.p`
     font-size: 22px;
   }
 `;
+const StyledActivityTime = motion(ActivityTime);
 
 export {
-  ActivitySection,
+  StyledActivitySection,
   ActivityContainer,
   ActivityTitle,
   ActivityElem,
@@ -195,5 +199,5 @@ export {
   ActivityItemResponsibilities,
   ActivityResponsibilitiesInner,
   ActivityItemResponsibility,
-  ActivityTime,
+  StyledActivityTime,
 };

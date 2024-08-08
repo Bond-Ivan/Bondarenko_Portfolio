@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const StackSection = styled.section`
@@ -5,6 +6,7 @@ const StackSection = styled.section`
   background-color: ${(props) => props.theme.background};
   border-bottom: 5px solid #ffb500;
 `;
+const StyledStackSection = motion(StackSection);
 
 const StackContainer = styled.div`
   margin: 0 auto;
@@ -86,6 +88,7 @@ const StackItem = styled.li`
   align-items: center;
   margin-bottom: 50px;
 `;
+const StyledStackItem = motion(StackItem);
 
 const StackItemIcon = styled.svg`
   width: 80px;
@@ -113,14 +116,14 @@ const StackItemTitle = styled.h4`
 `;
 
 export {
-  StackSection,
+  StyledStackSection,
   StackContainer,
   StackTitle,
   StackInner,
   StackContentTitle,
   StackContentText,
   StackList,
-  StackItem,
+  StyledStackItem,
   StackItemIcon,
   StackItemTitle,
 };

@@ -1,7 +1,8 @@
 import { ReactElement } from "react";
-import { AboutSection, AboutDescription, AboutTitle, AboutContainer } from "./About.styled";
+import { AboutSection, StyledAboutDescription as AboutDescription, AboutTitle, AboutContainer } from "./About.styled";
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
+import { animationAbout } from "../../../unitls/animation";
 
 function About(): ReactElement {
     const { t } = useTranslation();
@@ -13,7 +14,12 @@ function About(): ReactElement {
                     <AboutTitle>
                         {t("about.title")}
                     </AboutTitle>
-                    <AboutDescription>
+                    <AboutDescription
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ amount: 0.2, once: true }}
+                        variants={animationAbout}
+                    >
                         {t("about.description")}
                     </AboutDescription>
                 </AboutContainer>

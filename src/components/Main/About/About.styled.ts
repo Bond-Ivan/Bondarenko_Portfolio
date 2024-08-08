@@ -1,8 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const AboutSection = styled.section`
   position: relative;
-
   background-color: ${(props) => props.theme.background};
   border-bottom: 5px solid #ffb500;
 `;
@@ -53,5 +53,6 @@ const AboutDescription = styled.p`
     font-size: 16px;
   }
 `;
+const StyledAboutDescription = motion(AboutDescription);
 
-export { AboutSection, AboutContainer, AboutTitle, AboutDescription };
+export { AboutSection, AboutContainer, AboutTitle, StyledAboutDescription };

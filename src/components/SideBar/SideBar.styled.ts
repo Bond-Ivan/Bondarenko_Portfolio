@@ -16,7 +16,7 @@ const SideBarContainer = styled.div`
 
 const SideBarList = styled.ul`
   height: 100%;
-  padding-bottom: 30px;
+  padding: 30px 0 30px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -24,7 +24,7 @@ const SideBarList = styled.ul`
 `;
 
 const SideBarItem = styled.li`
-  width: 150px;
+  width: max-content;
   transform: rotate(-90deg);
 `;
 

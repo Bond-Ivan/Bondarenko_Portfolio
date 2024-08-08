@@ -1,19 +1,24 @@
 import { ReactElement } from "react";
 import {
-    ActivityBox, ActivitySection, ActivityElem,
-    ActivityItemPlace, ActivityItemPost, ActivityItemResponsibilities, ActivityItemResponsibility, ActivityList, ActivityResponsibilitiesInner, ActivityTime,
-    ActivityTitle,
-    ActivityContainer
+    ActivityBox, StyledActivitySection as ActivitySection, ActivityElem,
+    ActivityItemPlace, ActivityItemPost, ActivityItemResponsibilities, 
+    ActivityItemResponsibility, ActivityList, ActivityResponsibilitiesInner, 
+    StyledActivityTime as ActivityTime, ActivityTitle, ActivityContainer
 } from "./Activity.styled";
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
+import { animationActivity } from "../../../unitls/animation";
 
 function Activity(): ReactElement {
     const { t } = useTranslation();
 
     return (
         <Element name="Activity">
-            <ActivitySection>
+            <ActivitySection
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.2, once: true }}
+            >
                 <ActivityContainer>
                     <ActivityTitle>
                         {t("activity.title")}
@@ -58,7 +63,7 @@ function Activity(): ReactElement {
                                     </li>
                                 </ActivityList>
                             </ActivityBox>
-                            <ActivityTime>{t("activity.firstItem.time")}</ActivityTime>
+                            <ActivityTime variants={animationActivity} custom={1.5}>{t("activity.firstItem.time")}</ActivityTime>
                         </ActivityElem>
 
                         <ActivityElem>
@@ -66,36 +71,36 @@ function Activity(): ReactElement {
                                 <ActivityList>
                                     <li>
                                         <ActivityItemPost>
-                                        {t("activity.secondItem.position")}
+                                            {t("activity.secondItem.position")}
                                         </ActivityItemPost>
                                     </li>
                                     <li>
                                         <ActivityItemPlace>
-                                        {t("activity.secondItem.place")}
+                                            {t("activity.secondItem.place")}
                                         </ActivityItemPlace>
                                     </li>
                                     <li>
                                         <ActivityItemResponsibilities>
                                             <ActivityResponsibilitiesInner>
                                                 <ActivityItemResponsibility>
-                                                {t("activity.secondItem.duty1")}
+                                                    {t("activity.secondItem.duty1")}
                                                 </ActivityItemResponsibility>
                                             </ActivityResponsibilitiesInner>
                                             <ActivityResponsibilitiesInner>
                                                 <ActivityItemResponsibility>
-                                                {t("activity.secondItem.duty2")}
+                                                    {t("activity.secondItem.duty2")}
                                                 </ActivityItemResponsibility>
                                             </ActivityResponsibilitiesInner>
                                             <ActivityResponsibilitiesInner>
                                                 <ActivityItemResponsibility>
-                                                {t("activity.secondItem.duty3")}
+                                                    {t("activity.secondItem.duty3")}
                                                 </ActivityItemResponsibility>
                                             </ActivityResponsibilitiesInner>
                                         </ActivityItemResponsibilities>
                                     </li>
                                 </ActivityList>
                             </ActivityBox>
-                            <ActivityTime>{t("activity.secondItem.time")}</ActivityTime>
+                            <ActivityTime variants={animationActivity} custom={2.5}>{t("activity.secondItem.time")}</ActivityTime>
                         </ActivityElem>
 
                         <ActivityElem>
@@ -103,26 +108,26 @@ function Activity(): ReactElement {
                                 <ActivityList>
                                     <li>
                                         <ActivityItemPost>
-                                        {t("activity.thirdItem.position")}
+                                            {t("activity.thirdItem.position")}
                                         </ActivityItemPost>
                                     </li>
                                     <li>
                                         <ActivityItemPlace>
-                                        {t("activity.thirdItem.place")}
+                                            {t("activity.thirdItem.place")}
                                         </ActivityItemPlace>
                                     </li>
                                     <li>
                                         <ActivityItemResponsibilities>
                                             <ActivityResponsibilitiesInner>
                                                 <ActivityItemResponsibility>
-                                                {t("activity.thirdItem.duty1")}
+                                                    {t("activity.thirdItem.duty1")}
                                                 </ActivityItemResponsibility>
                                             </ActivityResponsibilitiesInner>
                                         </ActivityItemResponsibilities>
                                     </li>
                                 </ActivityList>
                             </ActivityBox>
-                            <ActivityTime>{t("activity.thirdItem.time")}</ActivityTime>
+                            <ActivityTime variants={animationActivity} custom={3.5}>{t("activity.thirdItem.time")}</ActivityTime>
                         </ActivityElem>
                     </div>
                 </ActivityContainer>

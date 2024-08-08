@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const ProjectsSection = styled.section`
@@ -6,6 +7,7 @@ const ProjectsSection = styled.section`
   background-color: ${(props) => props.theme.background};
   border-bottom: 5px solid #ffb500;
 `;
+const StyledProjectsSection = motion(ProjectsSection);
 
 const ProjectsContainer = styled.div`
   margin: 0 auto;
@@ -72,6 +74,8 @@ const ProjectsItem = styled.li`
   flex-direction: column;
   align-items: center;
 `;
+const StyledProjectsItem = motion(ProjectsItem);
+
 
 const ProjectsCard = styled.div`
   height: 100%;
@@ -134,20 +138,6 @@ const ProjectsCardText = styled.p`
   color: white;
 `;
 
-// const ProjectsCardLink = styled.div`
-//   margin: 0 auto;
-//   display: flex;
-//   width: max-content;
-//   padding: 10px 20px;
-//   background-color: white;
-//   color: orange;
-//   border-radius: 10px;
-//   transition: background-color 0.3s ease-in-out;
-//   &:hover {
-//     background-color: orange;
-//   }
-// `;
-
 const ProjectsCardLinkSpan = styled.span`
   margin: 0 auto;
   display: flex;
@@ -175,12 +165,12 @@ const ProjectsItemTitle = styled.h3`
 
 export {
   ProjectsCardLinkSpan,
-  ProjectsSection,
+  StyledProjectsSection,
   ProjectsContainer,
   ProjectsTitle,
   ProjectsDescription,
   ProjectsList,
-  ProjectsItem,
+  StyledProjectsItem,
   ProjectsCard,
   ProjectsCardWrapper,
   ProjectsCardImg,

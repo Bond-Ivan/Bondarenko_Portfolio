@@ -10,32 +10,32 @@ function SideBar(): ReactElement {
         <SideBarContainer>
             <SideBarList>
                 <SideBarItem>
-                    <Link to="Home" smooth={true} duration={500} offset={-50}>
+                    <Link to="Home" smooth={true} duration={500} offset={-120}>
                         <SideBarItemText>{t("sideBar.home")}</SideBarItemText>
                     </Link>
                 </SideBarItem>
                 <SideBarItem>
-                    <Link to="AboutMe" smooth={true} duration={500} offset={-50}>
+                    <Link to="AboutMe" smooth={true} duration={500} offset={-120}>
                         <SideBarItemText>{t("sideBar.about")}</SideBarItemText>
                     </Link>
                 </SideBarItem>
                 <SideBarItem>
-                    <Link to="Activity" smooth={true} duration={500} offset={-50}>
+                    <Link to="Activity" smooth={true} duration={500} offset={-120}>
                         <SideBarItemText>{t("sideBar.activity")}</SideBarItemText>
                     </Link>
                 </SideBarItem>
                 <SideBarItem>
-                    <Link to="Stack" smooth={true} duration={500} offset={-50}>
+                    <Link to="Stack" smooth={true} duration={500} offset={-120}>
                         <SideBarItemText>{t("sideBar.stack")}</SideBarItemText>
                     </Link>
                 </SideBarItem>
                 <SideBarItem>
-                    <Link to="Projects" smooth={true} duration={500} offset={-50}>
+                    <Link to="Projects" smooth={true} duration={500} offset={-120}>
                         <SideBarItemText>{t("sideBar.projects")}</SideBarItemText>
                     </Link>
                 </SideBarItem>
                 <SideBarItem>
-                    <Link to="contacts" smooth={true} duration={500} offset={-50}>
+                    <Link to="contacts" smooth={true} duration={500} offset={-120}>
                         <SideBarItemText>{t("sideBar.contacts")}</SideBarItemText>
                     </Link>
                 </SideBarItem>
