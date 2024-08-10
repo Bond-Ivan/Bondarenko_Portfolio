@@ -46,14 +46,14 @@ Error generating stack: `+o.message+`
   margin: 0 auto;
   max-width: 1920px;
   padding: 5px 70px 5px 125px;
-  z-index: 12;
+  z-index: 14;
   border-radius: 0 0 0 70px;
   background-color: #3e3e3e;
   border-bottom: 3px solid orange;
   @media (max-width: 768px) {
     padding: 5px 45px 5px 45px;
   }
-`,lS=A.header`
+`,lS=A.div`
   display: flex;
   justify-content: space-between;
 `,uS=A.div`
@@ -1000,6 +1000,7 @@ Error generating stack: `+o.message+`
     color: orange;
   }
 `,DR=A.h2`
+  width: max-content;
   padding: 5px 8px;
   position: fixed;
   transform: translate(50%, 12%);
@@ -1016,7 +1017,6 @@ Error generating stack: `+o.message+`
   text-shadow: 4px 4px #a17d51bb;
   @media (max-width: 1040px) {
     font-size: 55px;
-    width: 70%;
   }
 
   @media (max-width: 768px) {
