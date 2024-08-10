@@ -41,6 +41,14 @@ const SideBarItemText = styled.span`
   @media (max-width: 768px) {
     font-size: 18px;
   }
+
+  @media (max-height: 550px) {
+    font-size: 14px;
+  }
+
+  @media (max-height: 400px) {
+    font-size: 12px;
+  }
 `;
 
 export { SideBarContainer, SideBarList, SideBarItem, SideBarItemText };
