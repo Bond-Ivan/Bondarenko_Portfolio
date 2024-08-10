@@ -871,6 +871,14 @@ Error generating stack: `+o.message+`
   @media (max-width: 768px) {
     font-size: 18px;
   }
+
+  @media (max-height: 550px) {
+    font-size: 14px;
+  }
+
+  @media (max-height: 400px) {
+    font-size: 12px;
+  }
 `;function OR(){const{t:e}=It();return m.jsx(jR,{children:m.jsxs(_R,{children:[m.jsx(no,{children:m.jsx(Jr,{to:"AboutMe",smooth:!0,duration:500,offset:-120,children:m.jsx(ro,{children:e("sideBar.about")})})}),m.jsx(no,{children:m.jsx(Jr,{to:"Activity",smooth:!0,duration:500,offset:-120,children:m.jsx(ro,{children:e("sideBar.activity")})})}),m.jsx(no,{children:m.jsx(Jr,{to:"Stack",smooth:!0,duration:500,offset:-120,children:m.jsx(ro,{children:e("sideBar.stack")})})}),m.jsx(no,{children:m.jsx(Jr,{to:"Projects",smooth:!0,duration:500,offset:-120,children:m.jsx(ro,{children:e("sideBar.projects")})})}),m.jsx(no,{children:m.jsx(Jr,{to:"contacts",smooth:!0,duration:500,offset:-120,children:m.jsx(ro,{children:e("sideBar.contacts")})})})]})})}function RR(){return m.jsxs(m.Fragment,{children:[m.jsx(OR,{}),m.jsxs(kR,{children:[m.jsx(oT,{}),m.jsx(fT,{}),m.jsx(yT,{}),m.jsx(ET,{}),m.jsx(HE,{}),m.jsx(ER,{})]})]})}const AR=Jw`
     * {
         padding: 0px;
