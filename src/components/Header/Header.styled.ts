@@ -12,7 +12,7 @@ const HeaderContainer = styled.header`
   margin: 0 auto;
   max-width: 1920px;
   padding: 5px 70px 5px 125px;
-  z-index: 12;
+  z-index: 14;
   border-radius: 0 0 0 70px;
   background-color: #3e3e3e;
   border-bottom: 3px solid orange;
@@ -21,7 +21,7 @@ const HeaderContainer = styled.header`
   }
 `;
 
-const HeaderWrapper = styled.header`
+const HeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;

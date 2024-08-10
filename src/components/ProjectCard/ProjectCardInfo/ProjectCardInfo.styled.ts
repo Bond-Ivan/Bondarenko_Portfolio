@@ -54,6 +54,7 @@ const ProjectCardInfoBackSpan = styled.span`
 `;
 
 const PrpjectCardInfoTitle = styled.h2`
+  width: max-content;
   padding: 5px 8px;
   position: fixed;
   transform: translate(50%, 12%);
@@ -70,7 +71,6 @@ const PrpjectCardInfoTitle = styled.h2`
   text-shadow: 4px 4px #a17d51bb;
   @media (max-width: 1040px) {
     font-size: 55px;
-    width: 70%;
   }
 
   @media (max-width: 768px) {
