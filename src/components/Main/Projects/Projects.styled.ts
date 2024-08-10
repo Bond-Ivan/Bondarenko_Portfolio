@@ -69,112 +69,11 @@ const ProjectsList = styled.ul`
   }
 `;
 
-const ProjectsItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const StyledProjectsItem = motion(ProjectsItem);
-
-
-const ProjectsCard = styled.div`
-  height: 100%;
-  margin-bottom: 20px;
-  border: 3px solid orange;
-  border-radius: 40px;
-  -webkit-box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
-  -moz-box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
-  box-shadow: none;
-  transition: box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
-  }
-
-  @media (max-width: 576px) {
-    margin-bottom: 15px;
-  }
-`;
-
-const ProjectsCardWrapper = styled.div`
-  position: relative;
-  height: 100%;
-`;
-
-const ProjectsCardImg = styled.img`
-  height: 100%;
-  border-radius: 35px;
-  opacity: 0.3;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    opacity: 1;
-  }
-`;
-
-const ProjectsCardInner = styled.div`
-  position: absolute;
-  padding: 15px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 35px;
-  background-color: orange;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  max-height: 0;
-  opacity: 0;
-  transition: transform 0.5s, max-height 0.5s ease-in-out,
-    opacity 0.5s ease-in-out;
-
-  ${ProjectsCard}:hover & {
-    opacity: 1;
-    max-height: 200px;
-  }
-`;
-
-const ProjectsCardText = styled.p`
-  margin-bottom: 25px;
-  color: white;
-`;
-
-const ProjectsCardLinkSpan = styled.span`
-  margin: 0 auto;
-  display: flex;
-  width: max-content;
-  padding: 10px 20px;
-  background-color: white;
-  color: orange;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid orange;
-  scale: 1;
-  &:hover {
-    background-color: orange;
-    color: white;
-    border: 1px solid white;
-    scale: 1.05;
-  }
-`;
-
-const ProjectsItemTitle = styled.h3`
-  text-align: center;
-  font-size: 25px;
-  color: ${(props) => props.theme.color};
-`;
 
 export {
-  ProjectsCardLinkSpan,
   StyledProjectsSection,
   ProjectsContainer,
   ProjectsTitle,
   ProjectsDescription,
   ProjectsList,
-  StyledProjectsItem,
-  ProjectsCard,
-  ProjectsCardWrapper,
-  ProjectsCardImg,
-  ProjectsCardInner,
-  ProjectsCardText,
-  ProjectsItemTitle,
 };
