@@ -16,7 +16,7 @@ const SideBarContainer = styled.div`
 
 const SideBarList = styled.ul`
   height: 100%;
-  padding: 30px 0 30px 0;
+  padding: 45px 0 15px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

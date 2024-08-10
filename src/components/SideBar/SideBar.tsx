@@ -10,11 +10,6 @@ function SideBar(): ReactElement {
         <SideBarContainer>
             <SideBarList>
                 <SideBarItem>
-                    <Link to="Home" smooth={true} duration={500} offset={-120}>
-                        <SideBarItemText>{t("sideBar.home")}</SideBarItemText>
-                    </Link>
-                </SideBarItem>
-                <SideBarItem>
                     <Link to="AboutMe" smooth={true} duration={500} offset={-120}>
                         <SideBarItemText>{t("sideBar.about")}</SideBarItemText>
                     </Link>
