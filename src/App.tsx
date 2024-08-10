@@ -16,7 +16,7 @@ function App(): ReactElement {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='Bondarenko_Portfolio'>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Header toggleTheme={toggleTheme} />
