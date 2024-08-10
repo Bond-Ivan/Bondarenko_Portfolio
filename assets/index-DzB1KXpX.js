@@ -527,11 +527,11 @@ Error generating stack: `+o.message+`
     font-size: 16px;
   }
 `,lx=A.ul`
-  column-count: 3;
-  @media (max-width: 370px) {
-    column-count: 2;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `,TT=A.li`
+  width: 33%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -539,6 +539,9 @@ Error generating stack: `+o.message+`
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
   border-radius: 80px;
+  @media (max-width: 450px) {
+    width: 45%;
+  }
 `,Re=lr(TT),Ae=A.svg`
   width: 80px;
   height: 80px;
@@ -999,11 +1002,11 @@ Error generating stack: `+o.message+`
 `,MR=A.div`
   position: fixed;
   z-index: 30;
-  transform: translate(50%, 170%);
+  transform: translate(50%, 200%);
   right: 50%;
 `,DR=A.span`
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   transition: color 0.3s ease-in-out;
 
   &:hover {
