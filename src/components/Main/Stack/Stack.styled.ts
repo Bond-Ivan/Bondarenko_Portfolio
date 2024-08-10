@@ -87,6 +87,9 @@ const StackItem = styled.li`
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
 `;
 const StyledStackItem = motion(StackItem);
 
@@ -104,7 +107,6 @@ const StackItemIcon = styled.svg`
     width: 60px;
     height: 60px;
   }
-  
 `;
 
 const StackItemTitle = styled.h4`
