@@ -28,7 +28,7 @@ const ProjectCarGalleryTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: white;
-  text-shadow: 6px 6px #a17d51bb;
+  text-shadow: 4px 4px #a17d51bb;
   @media (max-width: 1040px) {
     font-size: 55px;
   }

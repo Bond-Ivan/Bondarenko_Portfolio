@@ -31,7 +31,7 @@ const ProjectsTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 6px 6px #a17d51bb;
+  text-shadow: 4px 4px #a17d51bb;
 
   @media (max-width: 1040px) {
     font-size: 55px;
@@ -124,8 +124,8 @@ const ProjectsCardInner = styled.div`
   transition: transform 0.3s ease-in-out;
   max-height: 0;
   opacity: 0;
-  transition: transform 0.3s, max-height 0.3s ease-in-out,
-    opacity 0.3s ease-in-out;
+  transition: transform 0.5s, max-height 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
 
   ${ProjectsCard}:hover & {
     opacity: 1;

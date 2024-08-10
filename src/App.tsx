@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './Themes/Themes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProjectCard from './components/ProjectCard/ProjectCard';
+import ScrollToTop from './unitls/components/ScrollTop';
 
 function App(): ReactElement {
   const [theme, setTheme] = useState(darkTheme);
@@ -19,6 +20,7 @@ function App(): ReactElement {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Header toggleTheme={toggleTheme} />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/ProjectCard/:projectId" element={<ProjectCard />} />

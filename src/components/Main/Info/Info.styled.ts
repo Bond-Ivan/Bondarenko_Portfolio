@@ -56,24 +56,24 @@ const StyledInfoWrapper = motion(InfoWrapper);
 
 const InfoTitle = styled.h1`
   margin-bottom: 50px;
-  font-size: 90px;
+  font-size: 60px;
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
-    font-size: 70px;
+    font-size: 48px;
   }
   @media (max-width: 768px) {
     margin-bottom: 40px;
-    font-size: 40px;
+    font-size: 35px;
   }
 `;
 
 const InfoDescription = styled.p`
   text-indent: 35px;
   line-height: 40px;
-  font-size: 30px;
+  font-size: 25px;
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   @media (max-width: 768px) {
