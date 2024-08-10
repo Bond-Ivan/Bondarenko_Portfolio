@@ -76,13 +76,13 @@ const StackContentText = styled.p`
 `;
 
 const StackList = styled.ul`
-  column-count: 3;
-  @media (max-width: 370px) {
-    column-count: 2;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const StackItem = styled.li`
+  width: 33%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,6 +90,9 @@ const StackItem = styled.li`
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
   border-radius: 80px;
+  @media (max-width: 450px) {
+    width: 45%;
+  }
 `;
 const StyledStackItem = motion(StackItem);
 

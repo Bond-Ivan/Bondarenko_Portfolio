@@ -39,13 +39,13 @@ const ProjectCardInfoDescription = styled.p`
 const ProjectCardInfoBack = styled.div`
   position: fixed;
   z-index: 30;
-  transform: translate(50%, 170%);
+  transform: translate(50%, 200%);
   right: 50%;
 `;
 
 const ProjectCardInfoBackSpan = styled.span`
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   transition: color 0.3s ease-in-out;
 
   &:hover {
