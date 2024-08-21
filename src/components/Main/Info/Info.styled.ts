@@ -101,6 +101,7 @@ const InfoEyes = styled.div`
 `;
 
 const InfoEye = styled.div`
+  overflow: hidden;
   width: 50px;
   height: 35px;
   border-radius: 100%;
