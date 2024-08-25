@@ -89,10 +89,13 @@
         "projects": "Projects",
         "contacts": "Contacts"
     },
-
     "button": {
         "open": "Open",
         "submit": "Submit",
         "back": "To main"
+    },
+    "modal": {
+        "success": "The data has been sent successfully, see you soon !",
+        "error": "Oops, there was a server error, data not sent"
     }
 }

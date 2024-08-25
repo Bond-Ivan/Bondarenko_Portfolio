@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const LoaderContainer = styled.div`
+const LoaderContactsContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: orange;
+  background-color: #000000b8;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@ const LoaderContainer = styled.div`
   top: 0;
 `;
 
-const LoaderSpinner = styled.div`
+const LoaderContactsSpinner = styled.div`
   width: 8vmax;
   height: 8vmax;
   border-right: 4px solid #ffffff;
@@ -65,4 +65,4 @@ const LoaderSpinner = styled.div`
   }
 `;
 
-export { LoaderContainer, LoaderSpinner };
+export { LoaderContactsContainer, LoaderContactsSpinner };
