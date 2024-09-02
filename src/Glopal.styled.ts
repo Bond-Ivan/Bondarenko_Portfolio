@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: "Lilita One", sans-serif;
+        font-family: "Russo One", sans-serif;
     }
 
     a, a:link, a:visited  {

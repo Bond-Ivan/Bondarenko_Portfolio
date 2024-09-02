@@ -16,7 +16,7 @@ function Stack(): ReactElement {
             <StackSection
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ amount: 0.2, once: true }}
+                viewport={{ amount: 0.6, once: true }}
             >
                 <StackContainer>
                     <StackTitle>
