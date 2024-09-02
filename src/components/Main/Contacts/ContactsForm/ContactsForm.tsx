@@ -2,9 +2,9 @@ import { send } from "emailjs-com";
 import { ReactElement, useRef, useState } from "react";
 import { FormItem, FormItemLabel, FormItemInput, FormButton } from "./ContactsForm.styled";
 import LoaderContacts from "../../../Loader/LoaderContacts";
-import ModalSuccess from "../../../ModalWindows/ModalSuccess";
+import ModalSuccess from "../../../Modals/ModalSuccess";
 import { useTranslation } from "react-i18next";
-import ModalError from "../../../ModalWindows/ModalError";
+import ModalError from "../../../Modals/ModalError";
 
 function ContactsForm(): ReactElement {
     const { t } = useTranslation();
@@ -19,8 +19,26 @@ function ContactsForm(): ReactElement {
         email: '',
     });
 
+    const isValidEmail = (email: string) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
     const onSubmit = (e: any) => {
+
         e.preventDefault();
+        
+        if (!toSend.from_name || !toSend.message || !toSend.email) {
+            alert('Заполните все поля');
+            return;
+        }
+
+        if (!isValidEmail(toSend.email)) {
+            alert('Некорректный email');
+            return;
+        }
+
+        console.log('не пустой');
         setLoader(true);
         send(
             'service_ontefvr',

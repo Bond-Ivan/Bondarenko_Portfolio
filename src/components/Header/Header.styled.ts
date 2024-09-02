@@ -89,6 +89,7 @@ const OptionsContainer = styled.div<DropdownArrowProps>`
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   overflow: hidden;
+  pointer-events: ${(props) => (props.$active ? "all" : "none")};
   opacity: ${(props) => (props.$active ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
   @media (max-width: 768px) {
