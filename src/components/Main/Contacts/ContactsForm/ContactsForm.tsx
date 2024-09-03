@@ -1,10 +1,11 @@
 import { send } from "emailjs-com";
-import { ReactElement, useRef, useState } from "react";
+import { ReactElement, useEffect, useRef, useState } from "react";
 import { FormItem, FormItemLabel, FormItemInput, FormButton } from "./ContactsForm.styled";
 import LoaderContacts from "../../../Loader/LoaderContacts";
 import ModalSuccess from "../../../Modals/ModalSuccess";
 import { useTranslation } from "react-i18next";
 import ModalError from "../../../Modals/ModalError";
+import emailRegex from "../../../../unitls/constants/email";
 
 function ContactsForm(): ReactElement {
     const { t } = useTranslation();
@@ -12,6 +13,7 @@ function ContactsForm(): ReactElement {
     const [loader, setLoader] = useState<boolean>(false);
     const [modalSuccess, setModalSuccess] = useState<boolean>(false);
     const [modalError, setModalError] = useState<boolean>(false);
+    const [inputsRequared, setInputRequares] = useState<boolean>(false);
 
     const [toSend, setToSend] = useState({
         from_name: '',
@@ -19,15 +21,22 @@ function ContactsForm(): ReactElement {
         email: '',
     });
 
+    useEffect(() => {
+        const result = Object.values(toSend).every(input => input.trim() !== '');
+        if (!result) {
+            setInputRequares(true);
+        } else {
+            setInputRequares(false);
+        }
+    }, [toSend]);
+
     const isValidEmail = (email: string) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
 
     const onSubmit = (e: any) => {
-
         e.preventDefault();
-        
+
         if (!toSend.from_name || !toSend.message || !toSend.email) {
             alert('Заполните все поля');
             return;
@@ -38,7 +47,6 @@ function ContactsForm(): ReactElement {
             return;
         }
 
-        console.log('не пустой');
         setLoader(true);
         send(
             'service_ontefvr',
@@ -86,7 +94,7 @@ function ContactsForm(): ReactElement {
                     <FormItemInput
                         type="text"
                         name="from_name"
-                        placeholder="John"
+                        placeholder="Ivan Bondarenko"
                         value={toSend.from_name}
                         onChange={handleChange}
                     />
@@ -96,7 +104,7 @@ function ContactsForm(): ReactElement {
                     <FormItemInput
                         type="email"
                         name="email"
-                        placeholder="john@acme.com"
+                        placeholder="bond@gmail.com"
                         value={toSend.email}
                         onChange={handleChange}
                     />
@@ -112,7 +120,7 @@ function ContactsForm(): ReactElement {
                         onChange={handleChange}
                     />
                 </FormItem>
-                <FormButton type="submit">{t("button.submit")}</FormButton>
+                <FormButton $disabled={inputsRequared} type="submit">{t("button.submit")}</FormButton>
             </form>
         </>
     )

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const FormButton = styled.button`
+interface FormButtonProps {
+  $disabled: boolean;
+}
+
+const FormButton = styled.button<FormButtonProps>`
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
@@ -10,6 +14,8 @@ const FormButton = styled.button`
   background-color: transparent;
   scale: 1;
   transition: all 0.3s ease-in-out;
+  pointer-events: ${(props) => (props.$disabled ? 'none': 'all')};
+  filter: ${(props) => (props.$disabled ? 'contrast(20%)' : 'contrast(1)')};
 
   &:hover {
     background-color: orange;
