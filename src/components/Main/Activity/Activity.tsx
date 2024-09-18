@@ -17,7 +17,7 @@ function Activity(): ReactElement {
             <ActivitySection
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ amount: 0.5, once: true }}
+                viewport={{ amount: 0.2, once: true }}
             >
                 <ActivityContainer>
                     <ActivityTitle>

@@ -44,7 +44,7 @@ function Projects(): ReactElement {
             <ProjectsSection
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ amount: 0.5, once: true }}
+                viewport={{ amount: 0.2, once: true }}
             >
                 <ProjectsContainer>
                     <ProjectsTitle>{t("projects.title")}</ProjectsTitle>

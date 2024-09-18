@@ -49,7 +49,7 @@ function Info(): ReactElement {
                     <InfoWrapper
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ amount: 0.5, once: true }}
+                        viewport={{ amount: 0.1, once: true }}
                         variants={animationInfo}>
                         <InfoTitle>{t("info.title")}</InfoTitle>
                         <InfoDescription>
