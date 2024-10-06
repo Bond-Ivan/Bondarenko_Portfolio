@@ -36,7 +36,21 @@
     "stack": {
         "title": "Мой стэк",
         "text": "Мои технологии",
-        "description": "Ниже приведен список технологий, которыми я владею."
+        "description": "Ниже приведен список технологий, которыми я владею.",
+        "technology": {
+            "react": "React",
+            "html5": "HTML5",
+            "sass": "SASS",
+            "webpack": "Webpack",
+            "typeScript": "TypeScript",
+            "css3": "CSS3",
+            "scss": "SCSS",
+            "gulp": "Gulp",
+            "redux": "Redux",
+            "javaScript": "JavaScript",
+            "git": "Git",
+            "vite": "Vite"
+        }
     },
     "projects": {
         "title": "Проекты",
@@ -97,5 +111,8 @@
     "modal": {
         "success": "Данные были успешно отправлены, до скорых встреч !",
         "error": "Упс, произошла ошибка с сервером, данные не отправлены"
+    },
+    "socials": {
+        "gitHub": "GitHub"
     }
 }

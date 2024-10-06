@@ -36,7 +36,21 @@
     "stack": {
         "title": "My Stack",
         "text": "My technologies",
-        "description": "Below is a list of technologies that I own"
+        "description": "Below is a list of technologies that I own",
+        "technology": {
+            "react": "React",
+            "html5": "HTML5",
+            "sass": "SASS",
+            "webpack": "Webpack",
+            "typeScript": "TypeScript",
+            "css3": "CSS3",
+            "scss": "SCSS",
+            "gulp": "Gulp",
+            "redux": "Redux",
+            "javaScript": "JavaScript",
+            "git": "Git",
+            "vite": "Vite"
+        }
     },
     "projects": {
         "title": "Projects",
@@ -97,5 +111,8 @@
     "modal": {
         "success": "The data has been sent successfully, see you soon !",
         "error": "Oops, there was a server error, data not sent"
+    },
+    "socials": {
+        "gitHub": "GitHub"
     }
 }
