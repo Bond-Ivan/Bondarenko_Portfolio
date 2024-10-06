@@ -32,10 +32,11 @@ const SideBarItemText = styled.span`
   cursor: pointer;
   color: white;
   font-size: 20px;
+  text-shadow: 4px 4px #0e0e0e1f;
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #3e3e3e;
+    color: #ffffffad;
   }
 
   @media (max-width: 768px) {

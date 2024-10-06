@@ -29,7 +29,7 @@ const StackTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 4px 4px #a17d51bb;
+  text-shadow: 4px 4px #ff9800d9;
   @media (max-width: 1040px) {
     font-size: 55px;
   }

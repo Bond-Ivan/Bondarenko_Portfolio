@@ -31,7 +31,8 @@ const ContactsTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 4px 4px #a17d51bb;
+  text-shadow: 4px 4px #ff9800d9;
+
   @media (max-width: 1040px) {
     font-size: 55px;
   }
@@ -61,6 +62,7 @@ const FormContainer = styled.div`
   border: 5px solid orange;
   background-color: transparent;
   border-radius: 35px 0 35px 0;
+  box-shadow: 0 5px 20px rgb(255 144 0);
 `;
 
 const FormTitle = styled.h3`

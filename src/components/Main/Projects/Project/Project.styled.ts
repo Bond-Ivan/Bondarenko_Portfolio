@@ -35,11 +35,11 @@ const ProjectCardWrapper = styled.div`
 const ProjectCardImg = styled.img`
   height: 100%;
   border-radius: 35px;
-  opacity: 0.3;
+  opacity: 1;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    opacity: 1;
+    opacity: 0.3;
   }
 `;
 
@@ -50,7 +50,7 @@ const ProjectCardInner = styled.div`
   left: 0;
   right: 0;
   border-radius: 35px;
-  background-color: orange;
+  background-color: #ff9800d9;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   max-height: 0;

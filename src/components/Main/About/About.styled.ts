@@ -27,7 +27,7 @@ const AboutTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   background-color: ${(props) => props.theme.background};
-  text-shadow: 4px 4px #a17d51bb;
+  text-shadow: 4px 4px #ff9800d9;
   @media (max-width: 1040px) {
     font-size: 55px;
   }
@@ -44,6 +44,9 @@ const AboutDescription = styled.p`
   text-indent: 35px;
   border: 5px solid orange;
   border-radius: 40px;
+  -webkit-box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
+  -moz-box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
+  box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
     padding: 15px;

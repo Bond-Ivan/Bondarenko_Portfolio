@@ -32,7 +32,7 @@ const ActivityTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 4px 4px #a17d51bb;
+  text-shadow: 4px 4px #ff9800d9;
 
   @media (max-width: 1040px) {
     font-size: 55px;
@@ -83,6 +83,9 @@ const ActivityBox = styled.div`
   border-radius: 30px;
   border: 5px solid orange;
   background-color: #3e3e3e;
+  -webkit-box-shadow: 6px 6px 35px 4px rgba(255, 169, 0, 0.49);
+  -moz-box-shadow: 6px 6px 35px 4px rgba(255, 169, 0, 0.49);
+  box-shadow: 6px 6px 35px 4px rgba(255, 169, 0, 0.49);
   scale: 1;
   transition: scale 0.3s ease-in-out;
   &:hover {
