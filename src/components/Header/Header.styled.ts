@@ -22,17 +22,63 @@ const HeaderWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const HeaderToggleTheme = styled.button`
-  color: white;
-  transition: color 0.3s ease-in-out;
+const ToggleSwitchContainer = styled.div`
+  position: relative;
+  width: 200px;
+`;
 
-  &:hover {
-    color: orange;
+const Label = styled.label`
+  position: absolute;
+  top: 8px;
+  width: 60%;
+  height: 35px;
+  background-color: #28292c;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+`;
+
+const HiddenInput = styled.input`
+  position: absolute;
+  display: none;
+`;
+
+const Slider = styled.span`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 16px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    box-shadow: inset 6px -1px 0px 0px #d8dbe0;
+    background-color: #28292c;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  ${HiddenInput}:checked + & {
+    background-color: #d8dbe0;
+
+    &:before {
+      transform: translateX(75px);
+      background-color: #28292c;
+      box-shadow: none;
+    }
   }
 `;
 
 export {
   HeaderContainer,
   HeaderWrapper,
-  HeaderToggleTheme,
+  ToggleSwitchContainer,
+  Slider,
+  Label,
+  HiddenInput
 };

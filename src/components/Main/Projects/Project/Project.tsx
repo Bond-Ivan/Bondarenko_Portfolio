@@ -12,7 +12,7 @@ import { animationProjects } from "../../../../unitls/animation";
 const Project = ({ projectImage, projectDescription, projectLink,
     projectAlt, projectTitle, projectCustom }: IProject): ReactElement => {
     const { t } = useTranslation();
-    console.log(projectLink);
+    
     return (
         <ProjectItem
             variants={animationProjects}

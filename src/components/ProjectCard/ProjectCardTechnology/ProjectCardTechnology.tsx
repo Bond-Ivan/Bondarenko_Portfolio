@@ -1,7 +1,9 @@
 import { ReactElement } from "react";
-import { StackList, StyledStackItem as StackItem, StackItemIcon, StackItemTitle } from "../../Main/Stack/Stack.styled";
+import { StackList } from "../../Main/Stack/Stack.styled";
 import { ProjectCarTechnologydSection, ProjectCardTechnologyContainer, ProjectCardTechnologyTitle } from "./ProjectCardTechnology.styled";
 import { useTranslation } from "react-i18next";
+import { StackItemIcon, StackItemTitle } from "../../Main/Stack/StackItem/StackItem.styled";
+import StackItem from "../../Main/Stack/StackItem/StackItem";
 
 const ProjectCardTechnology = (): ReactElement => {
     const { t } = useTranslation();
