@@ -13,6 +13,14 @@ const ModalErrorContainer = styled.div`
   padding: 15px 20px;
   animation: slideIn 2s forwards, shake 1s 2s forwards, fadeOut 1s 3s forwards;
 
+  @media (max-width: 768px) {
+    max-width: 320px;
+  }
+
+  @media (max-width: 520px) {
+    max-width: 250px;
+  }
+
   @keyframes slideIn {
     0% {
       transform: translateX(100%);

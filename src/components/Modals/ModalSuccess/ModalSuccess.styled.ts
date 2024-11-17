@@ -13,11 +13,11 @@ const ModalSuccessContainer = styled.div`
   padding: 15px 20px;
   animation: slideIn 2s forwards, shake 1s 2s forwards, fadeOut 1s 3s forwards;
   @media (max-width: 768px) {
-    padding: 13px 17px;
+    max-width: 320px;
   }
 
   @media (max-width: 520px) {
-    padding: 10px 15px;
+    max-width: 250px;
   }
 
   @keyframes slideIn {
