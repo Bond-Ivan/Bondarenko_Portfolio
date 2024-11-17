@@ -7,7 +7,7 @@ const ModalErrorContainer = styled.div`
   box-shadow: 2px 3px 56px 68px rgba(202, 0, 0, 0.2);
   max-width: 400px;
   top: 150px;
-  right: 100px;
+  right: 50px;
   background-color: red;
   border-radius: 10px;
   padding: 15px 20px;
@@ -55,6 +55,14 @@ const ModalErrorContainer = styled.div`
 const ModalErrorText = styled.p`
   font-size: 20px;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 15px;
+  }
 `;
 
 export { ModalErrorContainer, ModalErrorText };

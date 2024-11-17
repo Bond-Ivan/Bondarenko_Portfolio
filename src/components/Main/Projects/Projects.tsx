@@ -3,9 +3,9 @@ import {
     StyledProjectsSection as ProjectsSection, ProjectsDescription,
     ProjectsList, ProjectsTitle, ProjectsContainer,
 } from "./Projects.styled";
-import criptoProject from '../../../../public/img/Cripto-Project.png';
-import PrepareASleigh from '../../../../public/img/Prepare-a-sleigh.png';
-import Capico from '../../../../public/img/Capico.png';
+import criptoProject from '../../../../public/img/Cripto-Project.jpg';
+import PrepareASleigh from '../../../../public/img/Prepare-a-sleigh.jpg';
+import Capico from '../../../../public/img/Capico.jpg';
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
 import Project from "./Project/Project";

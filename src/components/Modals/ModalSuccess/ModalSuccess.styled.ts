@@ -7,11 +7,18 @@ const ModalSuccessContainer = styled.div`
   box-shadow: 2px 3px 56px 68px rgba(193, 108, 11, 0.2);
   max-width: 400px;
   top: 150px;
-  right: 100px;
+  right: 10px;
   background-color: orange;
-  border-radius: 10px;
+  border-radius: 50px;
   padding: 15px 20px;
   animation: slideIn 2s forwards, shake 1s 2s forwards, fadeOut 1s 3s forwards;
+  @media (max-width: 768px) {
+    padding: 13px 17px;
+  }
+
+  @media (max-width: 520px) {
+    padding: 10px 15px;
+  }
 
   @keyframes slideIn {
     0% {
@@ -55,6 +62,14 @@ const ModalSuccessContainer = styled.div`
 const ModalSuccessText = styled.p`
   font-size: 20px;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 15px;
+  }
 `;
 
 export { ModalSuccessContainer, ModalSuccessText };

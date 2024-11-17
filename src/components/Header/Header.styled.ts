@@ -29,6 +29,7 @@ const ToggleSwitchContainer = styled.div`
 
 const Label = styled.label`
   position: absolute;
+  right: 0;
   top: 8px;
   width: 60%;
   height: 35px;

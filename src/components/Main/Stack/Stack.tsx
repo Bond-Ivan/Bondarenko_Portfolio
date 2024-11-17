@@ -7,11 +7,12 @@ import {
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
 import StackItem from "./StackItem";
+import IStackItem from "./StackItem/StackItem.types";
 
 function Stack(): ReactElement {
     const { t } = useTranslation();
 
-    const stackList = [
+    const stackList: IStackItem[] = [
         {
             custom: 0.3,
             title: t("stack.technology.react"),
@@ -145,9 +146,15 @@ function Stack(): ReactElement {
                             <StackContentText>{t("stack.description")}</StackContentText>
                         </StackInner>
                         <StackList>
-                            {stackList.map((item, index) => {
+                            {stackList.map((item: IStackItem, index: number) => {
                                 return (
-                                    <StackItem key={index} item={item} />
+                                    <StackItem
+                                        key={index}
+                                        custom={item.custom}
+                                        title={item.title}
+                                        attributes={item.attributes}
+                                        iconContent={item.iconContent}
+                                    />
                                 )
                             })}
                         </StackList>
