@@ -6,6 +6,9 @@ import {
 import criptoProject from '../../../../public/img/Cripto-Project.jpg';
 import PrepareASleigh from '../../../../public/img/Prepare-a-sleigh.jpg';
 import Capico from '../../../../public/img/Capico.jpg';
+import Advolatum from '../../../../public/img/Advolatum.png';
+import BmPravo from "../../../../public/img/BM-PRAVO.png";
+
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
 import Project from "./Project/Project";
@@ -37,6 +40,22 @@ function Projects(): ReactElement {
             projectLink: "/ProjectCard/prepareASleigh",
             projectAlt: "Prepare-a-Sleigh",
             projectCustom: 1.5,
+        },
+        {
+            projectImage: Advolatum,
+            projectTitle: t("projects.fourthItem.title"),
+            projectDescription: t("projects.fourthItem.description"),
+            projectLink: "/ProjectCard/advolatum",
+            projectAlt: "Advolatum",
+            projectCustom: 2,
+        },
+        {
+            projectImage: BmPravo,
+            projectTitle: t("projects.fifthItem.title"),
+            projectDescription: t("projects.fifthItem.description"),
+            projectLink: "/ProjectCard/bmPravo",
+            projectAlt: "BM-Pravo",
+            projectCustom: 2.5,
         }
     ];
     return (

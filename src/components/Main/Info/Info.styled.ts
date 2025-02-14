@@ -61,6 +61,7 @@ const InfoTitle = styled.h1`
   margin-bottom: 50px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
+  text-shadow: 5px 5px #ff9800;
   @media (max-width: 1040px) {
     font-size: 48px;
   }
