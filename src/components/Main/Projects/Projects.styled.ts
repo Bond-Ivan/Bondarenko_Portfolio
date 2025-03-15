@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const ProjectsSection = styled.section`
   position: relative;
-  background: ${(props) => props.theme.background};
-  border-bottom: 5px solid #ffb500;
+  background-color: ${(props) => props.theme.background};
+  border-bottom: 5px solid black;
 `;
 const StyledProjectsSection = motion(ProjectsSection);
 
@@ -30,7 +30,7 @@ const ProjectsTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 4px 4px #ff9800d9;
+  text-shadow: 4px 4px blackd9;
 
   @media (max-width: 1040px) {
     font-size: 55px;

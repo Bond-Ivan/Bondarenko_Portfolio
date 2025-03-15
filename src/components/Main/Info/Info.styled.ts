@@ -6,8 +6,8 @@ const InfoSection = styled.section`
   background-image: url(${infoPhoneImg});
   background-repeat: no-repeat;
   background-position: 50% 110px;
-  background: ${(props) => props.theme.background};
-  border-bottom: 5px solid #ffb500;
+  background-color: ${(props) => props.theme.background};
+  border-bottom: 5px solid black;
   @media (max-width: 768px) {
     background-position: 50% 100px;
     background-size: 325px;
@@ -43,11 +43,11 @@ const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 30px;
-  border: 5px solid orange;
+  border: 5px solid black;
   border-radius: 40px;
-  -webkit-box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
-  -moz-box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
-  box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
+  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+-moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   @media (max-width: 768px) {
     padding: 15px;
   }
@@ -61,7 +61,7 @@ const InfoTitle = styled.h1`
   margin-bottom: 50px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 5px 5px #ff9800;
+  text-shadow: 5px 5px black;
   @media (max-width: 1040px) {
     font-size: 48px;
   }

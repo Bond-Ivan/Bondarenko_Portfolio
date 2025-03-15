@@ -31,7 +31,7 @@ const LanguageInput = styled.input`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: orange;
+    color: black;
   }
   @media (max-width: 768px) {
     font-size: 20px;
@@ -63,7 +63,7 @@ const LanguageOptions = styled.div<LanguageArrowProps>`
   top: 70px;
   width: 100%;
   background-color: #1a1818;
-  border: 3px solid orange;
+  border: 3px solid black;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   overflow: hidden;
@@ -86,7 +86,7 @@ const LanguageOption = styled.div`
   transition: 0.1s;
 
   &:hover {
-    background: orange;
+    background: black;
     color: white;
   }
 

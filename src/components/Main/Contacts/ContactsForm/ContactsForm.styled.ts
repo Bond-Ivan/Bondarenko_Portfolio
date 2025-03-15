@@ -8,7 +8,7 @@ const FormButton = styled.button<FormButtonProps>`
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
-  border: 2px solid orange;
+  border: 2px solid black;
   border-radius: 10px;
   color: ${(props) => props.theme.color};
   background-color: transparent;
@@ -18,7 +18,7 @@ const FormButton = styled.button<FormButtonProps>`
   filter: ${(props) => (props.$disabled ? 'contrast(20%)' : 'contrast(1)')};
 
   &:hover {
-    background-color: orange;
+    background-color: black;
     scale: 1.1;
   }
 `;
@@ -45,16 +45,19 @@ const FormItemLabel = styled.label`
 
 const FormItemInput = styled.input`
   padding: 10px 15px;
-  border: 3px solid orange;
+  border: 3px solid black;
   border-radius: 15px 0 15px 0;
   color: ${(props) => props.theme.color};
-  -webkit-box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
-  -moz-box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
+  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+-moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   box-shadow: none;
   transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
-    box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
+    -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+-moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   }
 `;
 

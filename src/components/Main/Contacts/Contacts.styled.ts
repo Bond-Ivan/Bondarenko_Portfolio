@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const ContactsSection = styled.section`
   position: relative;
-  background: ${(props) => props.theme.background};
-  border-bottom: 5px solid #ffb500;
+  background-color: ${(props) => props.theme.background};
+  border-bottom: 5px solid black;
 `;
 
 const ContactsContainer = styled.div`
@@ -31,7 +31,7 @@ const ContactsTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 4px 4px #ff9800d9;
+  text-shadow: 4px 4px blackd9;
 
   @media (max-width: 1040px) {
     font-size: 55px;
@@ -59,10 +59,12 @@ const FormContainer = styled.div`
   margin-bottom: 50px;
   padding: 20px 15px;
   width: 100%;
-  border: 5px solid orange;
+  border: 5px solid black;
   background-color: transparent;
   border-radius: 35px 0 35px 0;
-  box-shadow: 0 5px 20px rgb(255 144 0);
+  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+-moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
 `;
 
 const FormTitle = styled.h3`

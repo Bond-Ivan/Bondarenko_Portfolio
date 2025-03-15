@@ -4,7 +4,7 @@ const ProjectCardInfoSection = styled.section`
   height: 100%;
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 5px solid #ffb500;
+  border-bottom: 5px solid black;
 `;
 
 const ProjectCardInfoContainer = styled.div`
@@ -49,7 +49,7 @@ const ProjectCardInfoBackSpan = styled.span`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: orange;
+    color: black;
   }
 `;
 
@@ -59,16 +59,16 @@ const PrpjectCardInfoTitle = styled.h2`
   position: fixed;
   transform: translate(50%, 12%);
   right: 50%;
-  border: 3px solid orange;
+  border: 3px solid black;
   border-top: 0;
   z-index: 13;
   border-radius: 0 0 15px 15px;
-  background-color: #3e3e3e;
+  background-color: black;
   text-align: center;
   margin-bottom: 60px;
   font-size: 60px;
   color: white;
-  text-shadow: 4px 4px #ff9800d9;
+  text-shadow: 4px 4px blackd9;
   @media (max-width: 1040px) {
     font-size: 55px;
   }
@@ -89,9 +89,9 @@ const ProjectCardInfoImg = styled.img`
   display: flex;
   margin: 0 auto;
   margin-top: 170px;
-  border: 5px solid orange;
+  border: 5px solid black;
   border-radius: 45px;
-  filter: drop-shadow(12px 10px 30px orange);
+  filter: drop-shadow(12px 10px 30px rgba(255, 255, 255, 0.27));
   @media (max-width: 768px) {
     margin-top: 130px;
   }

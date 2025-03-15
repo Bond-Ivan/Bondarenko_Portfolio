@@ -11,15 +11,18 @@ const StyledProjectItem = motion(ProjectItem);
 const ProjectCard = styled.div`
   height: 100%;
   margin-bottom: 20px;
-  border: 3px solid orange;
+  border: 3px solid black;
   border-radius: 40px;
-  -webkit-box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
-  -moz-box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
+  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+-moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   box-shadow: none;
   transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
-    box-shadow: 4px 4px 49px 19px rgba(253, 145, 0, 0.2);
+    -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+-moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   }
 
   @media (max-width: 576px) {
@@ -50,7 +53,7 @@ const ProjectCardInner = styled.div`
   left: 0;
   right: 0;
   border-radius: 35px;
-  background-color: #ff9800d9;
+  background-color: blackd9;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   max-height: 0;
@@ -75,13 +78,13 @@ const ProjectCardLinkSpan = styled.span`
   width: max-content;
   padding: 10px 20px;
   background-color: white;
-  color: orange;
+  color: black;
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
-  border: 1px solid orange;
+  border: 1px solid black;
   scale: 1;
   &:hover {
-    background-color: orange;
+    background-color: black;
     color: white;
     border: 1px solid white;
     scale: 1.05;

@@ -8,7 +8,8 @@ const SideBarContainer = styled.div`
   height: 100%;
   z-index: 11;
   border-radius: 0 40px 40px 0;
-  background-color: orange;
+  background-color: #0A0F14;
+  border-right: 1px solid black;
   @media (max-width: 768px) {
     width: 35px;
   }

@@ -4,7 +4,7 @@ const ProjectCarTechnologydSection = styled.section`
   height: 100%;
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 5px solid #ffb500;
+  border-bottom: 5px solid black;
 `;
 
 const ProjectCardTechnologyContainer = styled.div`
@@ -27,7 +27,7 @@ const ProjectCardTechnologyTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: white;
-  text-shadow: 4px 4px #ff9800d9;
+  text-shadow: 4px 4px blackd9;
   @media (max-width: 1040px) {
     font-size: 55px;
   }

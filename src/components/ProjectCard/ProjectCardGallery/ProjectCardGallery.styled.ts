@@ -4,7 +4,7 @@ const ProjectCardGallerySection = styled.section`
   height: 100%;
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 5px solid #ffb500;
+  border-bottom: 5px solid black;
 `;
 
 const ProjectCardGalleryContainer = styled.div`
@@ -28,7 +28,7 @@ const ProjectCarGalleryTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: white;
-  text-shadow: 4px 4px #ff9800d9;
+  text-shadow: 4px 4px blackd9;
   @media (max-width: 1040px) {
     font-size: 55px;
   }
@@ -83,10 +83,10 @@ const ProjectCardGalleryListItem = styled.li`
 `;
 
 const ProjectCardListImg = styled.img`
-  border: 1px solid orange;
+  border: 1px solid black;
   width: 60%;
   border-radius: 10px;
-  filter: drop-shadow(12px 10px 30px orange);
+  filter: drop-shadow(12px 10px 30px rgba(255, 255, 255, 0.27));
   @media (max-width: 1040px) {
     width: 80%;
   }
@@ -111,8 +111,8 @@ const ProjectCardLinkText = styled.p`
 
 const ProjectCardLinkContent = styled.a`
   display: inline-block;
-  border: 2px solid orange;
-  color: orange;
+  border: 2px solid black;
+  color: black;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -124,7 +124,7 @@ const ProjectCardLinkContent = styled.a`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: orange;
+    background-color: black;
     color: white;
     scale: 1.1;
   }

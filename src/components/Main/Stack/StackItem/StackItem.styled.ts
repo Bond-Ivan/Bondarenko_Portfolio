@@ -28,7 +28,7 @@ const StackItemIcon = styled.svg`
   width: 80px;
   height: 80px;
   margin-bottom: 15px;
-  filter: drop-shadow(12px 10px 30px orange);
+  filter: drop-shadow(12px 10px 30px rgba(255, 255, 255, 0.27));
   scale: 1;
   transition: scale 0.3s ease-in-out;
   &:hover {

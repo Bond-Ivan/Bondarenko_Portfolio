@@ -8,7 +8,7 @@ const ModalSuccessContainer = styled.div`
   max-width: 400px;
   top: 150px;
   right: 10px;
-  background-color: orange;
+  background-color: black;
   border-radius: 50px;
   padding: 15px 20px;
   animation: slideIn 2s forwards, shake 1s 2s forwards, fadeOut 1s 3s forwards;

@@ -10,8 +10,8 @@ const HeaderContainer = styled.header`
   padding: 5px 70px 5px 125px;
   z-index: 14;
   border-radius: 0 0 0 70px;
-  background-color: #3e3e3e;
-  border-bottom: 3px solid orange;
+  background-color: #0A0F14;
+  border-bottom: 3px solid black;
   @media (max-width: 768px) {
     padding: 5px 45px 5px 45px;
   }

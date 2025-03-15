@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const ActivitySection = styled.section`
   position: relative;
-  background: ${(props) => props.theme.background};
-  border-bottom: 5px solid #ffb500;
+  background-color: ${(props) => props.theme.background};
+  border-bottom: 5px solid black;
 `;
 const StyledActivitySection = motion(ActivitySection);
 
@@ -32,7 +32,7 @@ const ActivityTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 4px 4px #ff9800d9;
+  text-shadow: 4px 4px blackd9;
 
   @media (max-width: 1040px) {
     font-size: 55px;
@@ -60,7 +60,7 @@ const ActivityElem = styled.div`
     transform: rotate(90deg);
     width: 42px;
     height: 7px;
-    background-color: orange;
+    background-color: black;
   }
 
   @media (max-width: 768px) {
@@ -81,11 +81,10 @@ const ActivityBox = styled.div`
   margin-right: 60px;
   padding: 20px;
   border-radius: 30px;
-  border: 5px solid orange;
-  background-color: #3e3e3e;
-  -webkit-box-shadow: 6px 6px 35px 4px rgba(255, 169, 0, 0.49);
-  -moz-box-shadow: 6px 6px 35px 4px rgba(255, 169, 0, 0.49);
-  box-shadow: 6px 6px 35px 4px rgba(255, 169, 0, 0.49);
+  border: 5px solid black;
+  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+  -moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+  box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   scale: 1;
   transition: scale 0.3s ease-in-out;
   &:hover {
@@ -122,7 +121,7 @@ const ActivityItemPost = styled.h3`
   font-size: 30px;
   line-height: 30px;
   color: white;
-  border-bottom: 5px solid orange;
+  border-bottom: 5px solid black;
 
   @media (max-width: 1040px) {
     margin-bottom: 20px;

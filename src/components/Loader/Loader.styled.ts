@@ -3,7 +3,7 @@ import styled from "styled-components";
 const LoaderContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: orange;
+  background-color: black;
   margin: 0;
   display: flex;
   justify-content: center;

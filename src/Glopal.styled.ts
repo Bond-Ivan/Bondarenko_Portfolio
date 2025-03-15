@@ -14,7 +14,13 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: "Russo One", sans-serif;
+        background-color: #0A0F14;
+        font-family: "Handjet", sans-serif;
+        /* font-family: "Shafarik", sans-serif;  */
+
+
+        /* font-family: "Press Start 2P", sans-serif; */
+
     }
 
     a, a:link, a:visited  {

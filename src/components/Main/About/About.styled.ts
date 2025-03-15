@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const AboutSection = styled.section`
   position: relative;
-  background: ${(props) => props.theme.background};
-  border-bottom: 5px solid #ffb500;
+  background-color: ${(props) => props.theme.background};
+  border-bottom: 5px solid black;
 `;
 
 const AboutContainer = styled.div`
@@ -27,7 +27,7 @@ const AboutTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   background-color: ${(props) => props.theme.background};
-  text-shadow: 4px 4px #ff9800d9;
+  text-shadow: 4px 4px blackd9;
   @media (max-width: 1040px) {
     font-size: 55px;
   }
@@ -42,11 +42,11 @@ const AboutDescription = styled.p`
   font-size: 18px;
   line-height: 30px;
   text-indent: 35px;
-  border: 5px solid orange;
+  border: 5px solid black;
   border-radius: 40px;
-  -webkit-box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
-  -moz-box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
-  box-shadow: 0px 0px 46px 9px rgba(225, 164, 17, 0.19);
+  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+-moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
     padding: 15px;
