@@ -6,7 +6,7 @@ const InfoSection = styled.section`
   background-image: url(${infoPhoneImg});
   background-repeat: no-repeat;
   background-position: 50% 110px;
-  background-color: ${(props) => props.theme.background};
+  background: ${(props) => props.theme.background};
   border-bottom: 5px solid #ffb500;
   @media (max-width: 768px) {
     background-position: 50% 100px;

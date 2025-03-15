@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const AboutSection = styled.section`
   position: relative;
-  background-color: ${(props) => props.theme.background};
+  background: ${(props) => props.theme.background};
   border-bottom: 5px solid #ffb500;
 `;
 

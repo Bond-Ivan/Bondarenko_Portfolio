@@ -7,7 +7,7 @@ import criptoProject from '../../../../public/img/Cripto-Project.jpg';
 import PrepareASleigh from '../../../../public/img/Prepare-a-sleigh.jpg';
 import Capico from '../../../../public/img/Capico.jpg';
 import Advolatum from '../../../../public/img/Advolatum.png';
-import BmPravo from "../../../../public/img/BM-PRAVO.png";
+import BmPravo from '../../../../public/img/BM-Pravo.png';
 
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";

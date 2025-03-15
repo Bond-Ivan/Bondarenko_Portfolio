@@ -4,7 +4,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
-  background: "#1a1818",
+  background: '#0A0F14',
   color: "#ffffff",
 };
 

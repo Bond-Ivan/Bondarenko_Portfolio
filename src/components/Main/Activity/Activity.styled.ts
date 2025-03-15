@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const ActivitySection = styled.section`
   position: relative;
-  background-color: ${(props) => props.theme.background};
+  background: ${(props) => props.theme.background};
   border-bottom: 5px solid #ffb500;
 `;
 const StyledActivitySection = motion(ActivitySection);
