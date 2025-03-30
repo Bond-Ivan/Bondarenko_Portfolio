@@ -1,11 +1,16 @@
 {
     "info": {
-        "title": "Nice to meet you!",
-        "description": "Welcome to my digital world! Hello! My name is Ivan Bondarenko, and I am a front-end developer, passionate about creating aesthetically pleasing and functionally rich web applications."
+        "title": "Hi! I am",
+        "name": "Ivan Bondarenko",
+        "description": "A Frontend developer with commercial development experience who creates vibrant and user-friendly web interfaces",
+        "button": "Contact"
     },
     "about": {
         "title": "About me",
-        "description": "I am a front-end developer with a deep understanding of web development fundamentals and modern technologies. My journey began with learning HTML, CSS and JavaScript, which allowed me to build a strong foundation for further professional growth. Since then, I have steadily expanded my knowledge and skills, mastering tools such as React, TypeScript and Redux, as well as learning the principles of reactive programming and the component-based approach to front-end development. With every new project, I strive to create websites that are not only functional, but also visually appealing. My work is characterized by clean code, optimized performance, and responsiveness to different devices and browsers. I pay great attention to detail and user experience to ensure that each site is not only beautiful, but also intuitive and user-friendly."
+        "boxTitle": "Why should I be hired for ",
+        "boxSpan": "Next project",
+        "description": "I am an experienced frontend developer with experience working in large organizations. I have experience creating commercial websites where I have successfully implemented projects from concept to launch. I am able to work with modern tools and technologies, which allows me to create user-friendly and attractive interfaces.",
+        "secondDescription": "In addition, I am constantly striving for self-development and exploring new trends in web development in order to stay on the cutting edge of technology. My goal is to create not only functional, but also aesthetically pleasing solutions that meet the needs of users and customers."
     },
     "activity": {
         "title": "Experience",
