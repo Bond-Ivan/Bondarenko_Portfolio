@@ -31,7 +31,7 @@ const LanguageInput = styled.input`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: black;
+    color: #ffffffad;
   }
   @media (max-width: 768px) {
     font-size: 20px;
@@ -62,7 +62,7 @@ const LanguageOptions = styled.div<LanguageArrowProps>`
   position: absolute;
   top: 70px;
   width: 100%;
-  background-color: #1a1818;
+  background-color: #0A0F14;
   border: 3px solid black;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
@@ -70,6 +70,9 @@ const LanguageOptions = styled.div<LanguageArrowProps>`
   pointer-events: ${(props) => (props.$active ? "all" : "none")};
   opacity: ${(props) => (props.$active ? 1 : 0)};
   transition: opacity 0.3s ease-in-out;
+  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.07);
+    -moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.07);
+    box-shadow: 3px 0px 10px 8px rgba(255, 255, 255, 0.07);
   @media (max-width: 768px) {
     top: 65px;
   }

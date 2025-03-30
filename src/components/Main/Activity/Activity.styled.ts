@@ -51,27 +51,6 @@ const ActivityElem = styled.div`
   &:not(:last-child) {
     margin-bottom: 35px;
   }
-
-  &:not(:last-child)::after {
-    position: absolute;
-    bottom: -20px;
-    content: "";
-    left: 213px;
-    transform: rotate(90deg);
-    width: 42px;
-    height: 7px;
-    background-color: black;
-  }
-
-  @media (max-width: 768px) {
-    &:not(:last-child)::after {
-      width: 90px;
-      bottom: 0;
-      left: 30%;
-      opacity: 0.1;
-    }
-    flex-direction: column;
-  }
 `;
 
 const ActivityBox = styled.div`
@@ -120,7 +99,9 @@ const ActivityItemPost = styled.h3`
   text-align: center;
   font-size: 30px;
   line-height: 30px;
-  color: white;
+  color: yellow;
+  font-weight: 500;
+  letter-spacing: 2px;
   border-bottom: 5px solid black;
 
   @media (max-width: 1040px) {
@@ -140,6 +121,7 @@ const ActivityItemPlace = styled.p`
   font-size: 25px;
   line-height: 30px;
   color: white;
+  font-weight: 600;
 
   @media (max-width: 1040px) {
     margin-bottom: 35px;
@@ -163,8 +145,8 @@ const ActivityResponsibilitiesInner = styled.li`
     top: 50%;
     content: "";
     width: 23px;
-    height: 1px;
-    background-color: red;
+    height: 2px;
+    background-color: yellow;
   }
 `;
 

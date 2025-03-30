@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import infoPhoneImg from "../../../../public/img/info-phone.png";
-import { motion } from "framer-motion";
+import infoPhoneImg from "../../../../public/img/qwe.png";
 
 const InfoSection = styled.section`
-  background-image: url(${infoPhoneImg});
+background-image: url(${infoPhoneImg});
   background-repeat: no-repeat;
-  background-position: 50% 110px;
+  background-position: 80% bottom;
+  background-size: 700px;
   background-color: ${(props) => props.theme.background};
   border-bottom: 5px solid black;
   @media (max-width: 768px) {
@@ -20,10 +20,12 @@ const InfoSection = styled.section`
 `;
 
 const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   margin: 0 auto;
   max-width: 1920px;
-  padding: 550px 70px 150px 125px;
+  padding: 150px 70px 150px 125px;
   display: flex;
   justify-content: center;
   @media (max-width: 1040px) {
@@ -39,27 +41,30 @@ const InfoContainer = styled.div`
   }
 `;
 
-const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  border: 5px solid black;
-  border-radius: 40px;
-  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
--moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-  @media (max-width: 768px) {
-    padding: 15px;
-  }
-  @media (max-width: 768px) {
-    width: 100%;
+const InfoButton = styled.button`
+  border: 1px solid yellow;
+  border-radius: 10px;
+  margin-right: auto;
+  background-color: yellow;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  font-size: 18px;
+  -webkit-box-shadow: 4px 4px 59px 9px rgba(229, 255, 0, 0.38);
+  -moz-box-shadow: 4px 4px 59px 9px rgba(229, 255, 0, 0.38);
+  box-shadow: 4px 4px 59px 9px rgba(229, 255, 0, 0.38);
+  scale: 1;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
   }
 `;
-const StyledInfoWrapper = motion(InfoWrapper);
 
 const InfoTitle = styled.h1`
   margin-bottom: 50px;
-  font-size: 60px;
+  font-weight: 700;
+  line-height: 90px;
+  font-size: 100px;
   color: ${(props) => props.theme.color};
   text-shadow: 5px 5px black;
   @media (max-width: 1040px) {
@@ -71,10 +76,17 @@ const InfoTitle = styled.h1`
   }
 `;
 
+const InfoName = styled.span`
+  display: flex;
+  filter: drop-shadow(12px 10px 30px rgba(255, 255, 0, 0.27));
+  color: yellow;
+`;
+
 const InfoDescription = styled.p`
-  text-indent: 35px;
+  max-width: 550px;
   line-height: 40px;
   font-size: 25px;
+  margin-bottom: 60px;
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
     font-size: 22px;
@@ -85,70 +97,11 @@ const InfoDescription = styled.p`
   }
 `;
 
-const InfoEyes = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  column-gap: 5px;
-  position: absolute;
-  top: 206px;
-  transform: translate(-38%, 15px);
-  @media (max-width: 768px) {
-    top: 160px;
-  }
-
-  @media (max-width: 576px) {
-    transform: translate(-52%, 15px);
-    top: 133px;
-  }
-`;
-
-const InfoEye = styled.div`
-  overflow: hidden;
-  width: 50px;
-  height: 35px;
-  border-radius: 100%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    width: 32px;
-    height: 17px;
-  }
-
-  @media (max-width: 576px) {
-    width: 22px;
-    height: 12px;
-  }
-`;
-
-const InfoPupil = styled.div`
-  width: 15px;
-  height: 15px;
-  border-radius: 101px;
-  background-color: #000;
-
-  @media (max-width: 768px) {
-    width: 8px;
-    height: 8px;
-  }
-
-  @media (max-width: 576px) {
-    width: 5px;
-    height: 5px;
-  }
-`;
-
 export {
   InfoSection,
   InfoContainer,
-  StyledInfoWrapper,
   InfoTitle,
   InfoDescription,
-  InfoEyes,
-  InfoEye,
-  InfoPupil,
+  InfoName,
+  InfoButton,
 };

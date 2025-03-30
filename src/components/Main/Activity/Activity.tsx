@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 import {
     ActivityBox, StyledActivitySection as ActivitySection, ActivityElem,
-    ActivityItemPlace, ActivityItemPost, ActivityItemResponsibilities, 
-    ActivityItemResponsibility, ActivityList, ActivityResponsibilitiesInner, 
+    ActivityItemPlace, ActivityItemPost, ActivityItemResponsibilities,
+    ActivityItemResponsibility, ActivityList, ActivityResponsibilitiesInner,
     StyledActivityTime as ActivityTime, ActivityTitle, ActivityContainer
 } from "./Activity.styled";
 import { Element } from 'react-scroll';
@@ -29,12 +29,12 @@ function Activity(): ReactElement {
                                 <ActivityList>
                                     <li>
                                         <ActivityItemPost>
-                                            {t("activity.firstItem.position")}
+                                            {t("activity.firstItem.place")}
                                         </ActivityItemPost>
                                     </li>
                                     <li>
                                         <ActivityItemPlace>
-                                            {t("activity.firstItem.place")}
+                                               {t("activity.firstItem.position")}
                                         </ActivityItemPlace>
                                     </li>
                                     <li>
@@ -71,12 +71,12 @@ function Activity(): ReactElement {
                                 <ActivityList>
                                     <li>
                                         <ActivityItemPost>
-                                            {t("activity.secondItem.position")}
+                                            {t("activity.secondItem.place")}
                                         </ActivityItemPost>
                                     </li>
                                     <li>
                                         <ActivityItemPlace>
-                                            {t("activity.secondItem.place")}
+                                            {t("activity.secondItem.position")}
                                         </ActivityItemPlace>
                                     </li>
                                     <li>
@@ -108,12 +108,12 @@ function Activity(): ReactElement {
                                 <ActivityList>
                                     <li>
                                         <ActivityItemPost>
-                                            {t("activity.thirdItem.position")}
+                                            {t("activity.thirdItem.place")}
                                         </ActivityItemPost>
                                     </li>
                                     <li>
                                         <ActivityItemPlace>
-                                            {t("activity.thirdItem.place")}
+                                            {t("activity.thirdItem.position")}
                                         </ActivityItemPlace>
                                     </li>
                                     <li>

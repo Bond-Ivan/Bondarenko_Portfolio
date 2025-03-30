@@ -38,24 +38,82 @@ const AboutTitle = styled.h2`
 
 const AboutDescription = styled.p`
   max-width: 800px;
-  padding: 30px;
   font-size: 18px;
   line-height: 30px;
   text-indent: 35px;
-  border: 5px solid black;
-  border-radius: 40px;
-  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
--moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   color: ${(props) => props.theme.color};
-  @media (max-width: 1040px) {
-    padding: 15px;
-  }
 
+  &:first-of-type {
+    margin-bottom: 10px;
+  }
   @media (max-width: 768px) {
     font-size: 16px;
   }
 `;
 const StyledAboutDescription = motion(AboutDescription);
 
-export { AboutSection, AboutContainer, AboutTitle, StyledAboutDescription };
+const AboutCard = styled.div`
+    border-radius: 10px;
+    width: 300px;
+    height: 450px;
+    position: relative;
+    perspective: 1000px;
+    animation: cardVisible 1.5s;  
+`;
+
+const AboutWrapper = styled.div`
+  display: flex;
+`;
+
+const AboutCardInner = styled.div`
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.2s ease-out;
+    transform-style: preserve-3d;
+    background-color: #10171F;
+    border-radius: 10px;
+`;
+
+const AboutCardBox = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0.6;
+    pointer-events: none;
+`;
+
+const AboutInner = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 70px;
+  max-width: 800px;
+  @media (max-width: 1040px) {
+    padding: 15px 15px 15px 50px;
+  }
+`;
+
+const AboutCardImage = styled.img`
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+    border: 2px solid yellow;
+    border-radius: 10px;
+`;
+
+const AboutBoxTitle = styled.h2`
+    font-size: 45px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 35px;
+`;
+
+const AboutBoxSpan = styled.span`
+  display: block;
+  color: yellow;
+`;
+
+export { AboutSection, AboutBoxSpan, AboutBoxTitle, AboutInner, AboutWrapper, AboutCardImage, AboutCardBox, AboutCardInner, AboutContainer, AboutTitle, StyledAboutDescription, AboutCard };
