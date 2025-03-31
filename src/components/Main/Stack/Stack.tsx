@@ -1,8 +1,9 @@
 import { ReactElement } from "react";
 import {
-    StyledStackSection as StackSection, StackContentText, StackContentTitle,
+    StyledStackSection as StackSection, StackContentTitle,
     StackInner,
-    StackList, StackTitle, StackContainer
+    StackList, StackTitle, StackContainer,
+    StackSpan
 } from "./Stack.styled";
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
@@ -142,8 +143,9 @@ function Stack(): ReactElement {
                     </StackTitle>
                     <div>
                         <StackInner>
-                            <StackContentTitle>{t("stack.text")}</StackContentTitle>
-                            <StackContentText>{t("stack.description")}</StackContentText>
+                            <StackContentTitle>{t("stack.text")}
+                                <StackSpan>{t("stack.secontText")}</StackSpan>
+                            </StackContentTitle>
                         </StackInner>
                         <StackList>
                             {stackList.map((item: IStackItem, index: number) => {

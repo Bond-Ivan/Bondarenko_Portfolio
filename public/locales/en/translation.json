@@ -40,8 +40,8 @@
     },
     "stack": {
         "title": "My Stack",
-        "text": "My technologies",
-        "description": "Below is a list of technologies that I own",
+        "text": "What technologies do ",
+        "secontText": "I Own",
         "technology": {
             "react": "React",
             "html5": "HTML5",

@@ -61,9 +61,9 @@ const ActivityBox = styled.div`
   padding: 20px;
   border-radius: 30px;
   border: 5px solid black;
-  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-  -moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-  box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+  -webkit-box-shadow: 1px 1px 14px 1px rgba(229, 255, 0, 0.38);
+  -moz-box-shadow: 1px 1px 14px 1px rgba(229, 255, 0, 0.38);
+  box-shadow: 1px 1px 14px 1px rgba(229, 255, 0, 0.38);
   scale: 1;
   transition: scale 0.3s ease-in-out;
   &:hover {

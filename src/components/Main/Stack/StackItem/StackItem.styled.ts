@@ -18,7 +18,7 @@ const StyledStackItem = motion(StackItem);
 
 const StackItemTitle = styled.h4`
   font-size: 20px;
-  color: ${(props) => props.theme.color};
+  color: yellow;
   @media (max-width: 1040px) {
     font-size: 18px;
   }

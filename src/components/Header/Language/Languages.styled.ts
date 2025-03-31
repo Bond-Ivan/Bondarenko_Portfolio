@@ -31,7 +31,7 @@ const LanguageInput = styled.input`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #ffffffad;
+    color: yellow;
   }
   @media (max-width: 768px) {
     font-size: 20px;
@@ -86,11 +86,11 @@ const LanguageOption = styled.div`
   padding: 12px 20px;
   color: #ffffff;
   cursor: pointer;
-  transition: 0.1s;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     background: black;
-    color: white;
+    color: yellow;
   }
 
   @media (max-width: 768px) {

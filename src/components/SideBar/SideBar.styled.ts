@@ -37,7 +37,7 @@ const SideBarItemText = styled.span`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #ffffffad;
+    color: yellow;
   }
 
   @media (max-width: 768px) {

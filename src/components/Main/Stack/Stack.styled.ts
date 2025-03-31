@@ -51,7 +51,8 @@ const StackInner = styled.div`
 
 const StackContentTitle = styled.h3`
   margin-bottom: 30px;
-  font-size: 35px;
+  font-size: 45px;
+  font-weight: 600;
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
     font-size: 32px;
@@ -63,16 +64,10 @@ const StackContentTitle = styled.h3`
   }
 `;
 
-const StackContentText = styled.p`
-  font-size: 20px;
-  color: ${(props) => props.theme.color};
-  @media (max-width: 1040px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
+const StackSpan = styled.span`
+  display: block;
+  color: yellow;
+  text-align: center;
 `;
 
 const StackList = styled.ul`
@@ -87,6 +82,6 @@ export {
   StackTitle,
   StackInner,
   StackContentTitle,
-  StackContentText,
   StackList,
+  StackSpan,
 };
