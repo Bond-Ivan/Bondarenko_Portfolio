@@ -40,6 +40,7 @@ const ActivityTitle = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 40px;
+    top: -30px;
   }
 `;
 
@@ -50,6 +51,10 @@ const ActivityElem = styled.div`
 
   &:not(:last-child) {
     margin-bottom: 35px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
@@ -113,6 +118,11 @@ const ActivityItemPost = styled.h3`
   @media (max-width: 768px) {
     font-size: 28px;
   }
+
+  @media (max-width: 576px) {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 `;
 
 const ActivityItemPlace = styled.p`
@@ -147,6 +157,14 @@ const ActivityResponsibilitiesInner = styled.li`
     width: 23px;
     height: 2px;
     background-color: yellow;
+  }
+
+  @media (max-width: 576px) {
+    padding-left: 20px;
+    &::before {
+      left: -10px;
+      width: 16px;
+  }
   }
 `;
 

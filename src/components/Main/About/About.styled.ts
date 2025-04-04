@@ -21,15 +21,16 @@ const AboutContainer = styled.div`
 
 const AboutTitle = styled.h2`
   position: absolute;
-  top: -40px;
+  top: -20px;
   padding: 0 20px;
   color: ${(props) => props.theme.color};
   margin-bottom: 60px;
   font-size: 60px;
   background-color: ${(props) => props.theme.background};
-  text-shadow: 4px 4px blackd9;
+  text-shadow: 4px 4px black;
   @media (max-width: 1040px) {
-    font-size: 55px;
+    font-size: 40px;
+    line-height: 38px;
   }
   @media (max-width: 768px) {
     font-size: 40px;
@@ -58,11 +59,25 @@ const AboutCard = styled.div`
     height: 450px;
     position: relative;
     perspective: 1000px;
-    animation: cardVisible 1.5s;  
+    animation: cardVisible 1.5s;
+    @media (max-width: 1040px) {
+      width: 350px;
+    }
+
+    @media (max-width: 768px) {
+      width: 80%;
+      margin: 0 auto;
+      height: 170px;
+    }
 `;
 
 const AboutWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const AboutCardInner = styled.div`
@@ -89,10 +104,14 @@ const AboutCardBox = styled.div`
 const AboutInner = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 20px 70px;
+  padding: 0 0 0 70px;
   max-width: 800px;
   @media (max-width: 1040px) {
-    padding: 15px 15px 15px 50px;
+    padding: 0 0 0 50px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 0 30px 0;
   }
 `;
 
@@ -102,6 +121,10 @@ const AboutCardImage = styled.img`
     height: 100%;
     border: 2px solid yellow;
     border-radius: 10px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 `;
 
 const AboutBoxTitle = styled.h2`
@@ -109,6 +132,10 @@ const AboutBoxTitle = styled.h2`
     color: white;
     font-weight: 600;
     margin-bottom: 35px;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
 `;
 
 const AboutBoxSpan = styled.span`

@@ -2,20 +2,26 @@ import styled from "styled-components";
 import infoPhoneImg from "../../../../public/img/qwe.png";
 
 const InfoSection = styled.section`
-background-image: url(${infoPhoneImg});
+  background-image: url(${infoPhoneImg});
   background-repeat: no-repeat;
   background-position: 80% bottom;
-  background-size: 700px;
+  background-size: 500px;
   background-color: ${(props) => props.theme.background};
   border-bottom: 5px solid black;
+  @media (max-width: 1240px) {
+    background-position: right bottom;
+  }
+
+  @media (max-width: 1040px) {
+    background-size: 380px;
+  }
+
   @media (max-width: 768px) {
-    background-position: 50% 100px;
-    background-size: 325px;
+    background-size: 300px;
   }
 
   @media (max-width: 576px) {
-    background-position: 50% 90px;
-    background-size: 250px;
+    background-size: 280px;
   }
 `;
 
@@ -29,15 +35,15 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: center;
   @media (max-width: 1040px) {
-    padding: 550px 25px 115px 105px;
+    padding: 105px 25px 115px 105px;
   }
-
+  
   @media (max-width: 768px) {
-    padding: 370px 10px 115px 50px;
+    padding: 100px 10px 100px 50px;
   }
 
   @media (max-width: 576px) {
-    padding-top: 300px;
+    padding: 100px 10px 100px 50px;
   }
 `;
 
@@ -49,9 +55,9 @@ const InfoButton = styled.button`
   letter-spacing: 1px;
   padding: 10px 15px;
   font-size: 18px;
-  -webkit-box-shadow: 4px 4px 59px 9px rgba(229, 255, 0, 0.38);
-  -moz-box-shadow: 4px 4px 59px 9px rgba(229, 255, 0, 0.38);
-  box-shadow: 4px 4px 59px 9px rgba(229, 255, 0, 0.38);
+  -webkit-box-shadow: 4px 4px 25px 9px rgba(229, 255, 0, 0.38);
+  -moz-box-shadow: 4px 25px 59px 9px rgba(229, 255, 0, 0.38);
+  box-shadow: 4px 4px 25px 9px rgba(229, 255, 0, 0.38);
   scale: 1;
   transition: all 0.3s ease-in-out;
 
@@ -68,11 +74,13 @@ const InfoTitle = styled.h1`
   color: ${(props) => props.theme.color};
   text-shadow: 5px 5px black;
   @media (max-width: 1040px) {
-    font-size: 48px;
+    font-size: 70px;
+    line-height: 80px;
+    margin-bottom: 40px;
   }
   @media (max-width: 768px) {
-    margin-bottom: 40px;
-    font-size: 35px;
+    font-size: 45px;
+    line-height: 60px;
   }
 `;
 
@@ -90,10 +98,17 @@ const InfoDescription = styled.p`
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
     font-size: 22px;
+    max-width: 435px;
   }
 
   @media (max-width: 768px) {
     font-size: 20px;
+    max-width: 400px;
+  }
+
+  @media (max-width: 768px) {
+    line-height: 35px;
+    max-width: 300px;
   }
 `;
 
