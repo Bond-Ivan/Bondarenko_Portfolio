@@ -179,6 +179,10 @@ const ProjectTabText = styled.p`
   @media (max-width: 950px) {
     font-size: 25px;
     }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+  }
 `;
 
 const ProjectTabButton = styled.button`
