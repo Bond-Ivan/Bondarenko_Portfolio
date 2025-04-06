@@ -808,6 +808,10 @@ Error generating stack: `+s.message+`
   @media (max-width: 950px) {
     font-size: 25px;
     }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+  }
 `,Oi=R.button`
   margin: 0 auto;
   color: black;
