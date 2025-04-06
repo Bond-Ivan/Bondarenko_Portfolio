@@ -39,7 +39,7 @@ const AboutTitle = styled.h2`
 
 const AboutDescription = styled.p`
   max-width: 800px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 30px;
   text-indent: 35px;
   color: ${(props) => props.theme.color};

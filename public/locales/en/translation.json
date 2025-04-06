@@ -88,6 +88,38 @@
             "thirdItem": {
                 "description": "Informative site with an invitation to Santa's party. This site is designed in the `Carousel` style - each page is a separate semantic page. The site is implemented using technologies such as HTML, CSS, SCSS preprocessor, JavaScript, and the Gulp project builder. The site is entertaining in nature and has specific content and text."
             }
+        },
+        "tab": {
+            "title": {
+                "firstItem": {
+                    "text": "Online store",
+                    "name": " Advolatum"
+                },
+                "secondItem": {
+                    "text": "Informative website",
+                    "name": " Prepare a Sleight"
+                },
+                "thirdItem": {
+                    "text": "Trading platform",
+                    "name": " Capico"
+                },
+                "fourthItem": {
+                    "text": "Cryptocurrency Website",
+                    "name": " Foil Network"
+                },
+                "fifthItem": {
+                    "text": "Legal website",
+                    "name": " BM Pravo"
+                }
+            },
+            "text": {
+                "firstItem": "Advolatum is a modern online store offering a wide range of products with full functionality for convenient and secure online shopping. The platform is designed with a focus on the user experience, providing an intuitive interface and easy navigation.",
+                "secondItem": "An interactive website designed to organize and invite guests to an unforgettable holiday party in honor of St. Nicholas Day. The site offers users a convenient and fun way to send invitations, find out the details of the event and prepare for the holiday.",
+                "thirdItem": "Capico is a web—based platform for trading on cryptocurrency exchanges, offering users tools for independent trading and the use of trading bots. The platform supports multichat, cryptocurrency analysis, and integration with multiple exchanges.",
+                "fourthItem": "Foil Network is a multifunctional blockchain platform offering services for creating smart contracts and unique NFTs. It provides a decentralized economy and supports cross-blockchain technologies for data storage and ecosystem management.",
+                "fifthItem": "BM Pravo is a legal platform that provides a wide range of legal services for individuals and legal entities. The site offers professional advice, assistance in drafting and verifying legal documents, as well as representation in court."
+            },
+            "button": "More detailed"
         }
     },
     "contacts": {

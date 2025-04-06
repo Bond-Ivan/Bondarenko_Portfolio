@@ -1,63 +1,32 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import {
-    StyledProjectsSection as ProjectsSection, ProjectsDescription,
-    ProjectsList, ProjectsTitle, ProjectsContainer,
+    StyledProjectsSection as ProjectsSection, ProjectsTitle,
+    ProjectsContainer, SwiperProjects, StyledSwiperSlide,
+    ProjectTab,
+    ProjectsWrapper,
+    ProjectTabTitle,
+    ProjectTabButton,
+    ProjectTabText,
+    ProjectTabTitleSpan,
+    ProjectTabWrapper,
 } from "./Projects.styled";
-import criptoProject from '../../../../public/img/Cripto-Project.jpg';
-import PrepareASleigh from '../../../../public/img/Prepare-a-sleigh.jpg';
-import Capico from '../../../../public/img/Capico.jpg';
-import Advolatum from '../../../../public/img/Advolatum.png';
-import BmPravo from '../../../../public/img/BM-Pravo.png';
 
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
-import Project from "./Project/Project";
-import IProject from "./Projects.types";
+
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import { EffectCards } from 'swiper/modules';
+import Swiper from "swiper";
 
 function Projects(): ReactElement {
     const { t } = useTranslation();
-    const projectsArray: IProject[] = [
-        {
-            projectImage: criptoProject,
-            projectTitle: t("projects.firstItem.title"),
-            projectDescription: t("projects.firstItem.description"),
-            projectLink: "/ProjectCard/criptoProject",
-            projectAlt: "Cripto-Project",
-            projectCustom: 0.5,
-        },
-        {
-            projectImage: Capico,
-            projectTitle: t("projects.secondItem.title"),
-            projectDescription: t("projects.secondItem.description"),
-            projectLink: "/ProjectCard/capico",
-            projectAlt: "Capico",
-            projectCustom: 1,
-        },
-        {
-            projectImage: PrepareASleigh,
-            projectTitle: t("projects.thirdItem.title"),
-            projectDescription: t("projects.thirdItem.description"),
-            projectLink: "/ProjectCard/prepareASleigh",
-            projectAlt: "Prepare-a-Sleigh",
-            projectCustom: 1.5,
-        },
-        {
-            projectImage: Advolatum,
-            projectTitle: t("projects.fourthItem.title"),
-            projectDescription: t("projects.fourthItem.description"),
-            projectLink: "/ProjectCard/advolatum",
-            projectAlt: "Advolatum",
-            projectCustom: 2,
-        },
-        {
-            projectImage: BmPravo,
-            projectTitle: t("projects.fifthItem.title"),
-            projectDescription: t("projects.fifthItem.description"),
-            projectLink: "/ProjectCard/bmPravo",
-            projectAlt: "BM-Pravo",
-            projectCustom: 2.5,
-        }
-    ];
+    const [activeSlide, setActiveSlide] = useState(0);
+
+    const handleSlideChange = (swiper: Swiper) => {
+        setActiveSlide(swiper.activeIndex);
+    };
+
     return (
         <Element name="Projects">
             <ProjectsSection
@@ -67,22 +36,88 @@ function Projects(): ReactElement {
             >
                 <ProjectsContainer>
                     <ProjectsTitle>{t("projects.title")}</ProjectsTitle>
-                    <ProjectsDescription>{t("projects.description")}</ProjectsDescription>
-                    <ProjectsList>
-                        {projectsArray.map((project: IProject, index): ReactElement => {
-                            return (
-                                <Project
-                                    key={index}
-                                    projectImage={project.projectImage}
-                                    projectDescription={project.projectDescription}
-                                    projectLink={project.projectLink}
-                                    projectAlt={project.projectAlt}
-                                    projectTitle={project.projectTitle}
-                                    projectCustom={project.projectCustom}
-                                />
-                            );
-                        })}
-                    </ProjectsList>
+                    <ProjectsWrapper>
+                        <SwiperProjects
+                            effect={'cards'}
+                            grabCursor={true}
+                            modules={[EffectCards]}
+                            className="mySwiper"
+                            onSlideChange={handleSlideChange}
+                        >
+                            <StyledSwiperSlide></StyledSwiperSlide>
+                            <StyledSwiperSlide></StyledSwiperSlide>
+                            <StyledSwiperSlide></StyledSwiperSlide>
+                            <StyledSwiperSlide></StyledSwiperSlide>
+                            <StyledSwiperSlide></StyledSwiperSlide>
+                        </SwiperProjects>
+                        <ProjectTabWrapper>
+                            {activeSlide === 0 &&
+                                <ProjectTab>
+                                    <ProjectTabTitle>
+                                        {t("projects.tab.title.firstItem.text")}
+                                        <ProjectTabTitleSpan>{t("projects.tab.title.firstItem.name")}</ProjectTabTitleSpan>
+                                    </ProjectTabTitle>
+                                    <ProjectTabText>
+                                        {t("projects.tab.text.firstItem")}
+                                    </ProjectTabText>
+                                    <ProjectTabButton>
+                                        {t("projects.tab.button")}
+                                    </ProjectTabButton>
+                                </ProjectTab>}
+                            {activeSlide === 1 &&
+                                <ProjectTab>
+                                    <ProjectTabTitle>
+                                        {t("projects.tab.title.secondItem.text")}
+                                        <ProjectTabTitleSpan>{t("projects.tab.title.secondItem.name")}</ProjectTabTitleSpan>
+                                    </ProjectTabTitle>
+                                    <ProjectTabText>
+                                        {t("projects.tab.text.secondItem")}
+                                    </ProjectTabText>
+                                    <ProjectTabButton>
+                                        {t("projects.tab.button")}
+                                    </ProjectTabButton>
+                                </ProjectTab>}
+                            {activeSlide === 2 &&
+                                <ProjectTab>
+                                    <ProjectTabTitle>
+                                        {t("projects.tab.title.thirdItem.text")}
+                                        <ProjectTabTitleSpan>{t("projects.tab.title.thirdItem.name")}</ProjectTabTitleSpan>
+                                    </ProjectTabTitle>
+                                    <ProjectTabText>
+                                        {t("projects.tab.text.thirdItem")}
+                                    </ProjectTabText>
+                                    <ProjectTabButton>
+                                        {t("projects.tab.button")}
+                                    </ProjectTabButton>
+                                </ProjectTab>}
+                            {activeSlide === 3 &&
+                                <ProjectTab>
+                                    <ProjectTabTitle>
+                                        {t("projects.tab.title.fourthItem.text")}
+                                        <ProjectTabTitleSpan>{t("projects.tab.title.fourthItem.name")}</ProjectTabTitleSpan>
+                                    </ProjectTabTitle>
+                                    <ProjectTabText>
+                                        {t("projects.tab.text.fourthItem")}
+                                    </ProjectTabText>
+                                    <ProjectTabButton>
+                                        {t("projects.tab.button")}
+                                    </ProjectTabButton>
+                                </ProjectTab>}
+                            {activeSlide === 4 &&
+                                <ProjectTab>
+                                     <ProjectTabTitle>
+                                        {t("projects.tab.title.fifthItem.text")}
+                                        <ProjectTabTitleSpan>{t("projects.tab.title.fifthItem.name")}</ProjectTabTitleSpan>
+                                    </ProjectTabTitle>
+                                    <ProjectTabText>
+                                        {t("projects.tab.text.fifthItem")}
+                                    </ProjectTabText>
+                                    <ProjectTabButton>
+                                        {t("projects.tab.button")}
+                                    </ProjectTabButton>
+                                </ProjectTab>}
+                        </ProjectTabWrapper>
+                    </ProjectsWrapper>
                 </ProjectsContainer>
             </ProjectsSection>
         </Element>
