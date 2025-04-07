@@ -73,8 +73,8 @@ const FormContainer = styled.div`
   background-color: transparent;
   border-radius: 35px 0 35px 0;
   -webkit-box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
-  -moz-box-shadow: 4px 25px 10px 9px rgba(229, 255, 0, 0.38);
-  box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
+  -moz-box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
+  box-shadow: 1px 1px 5px 1px rgba(229, 255, 0, 0.38);
 `;
 
 const FormTitle = styled.h3`

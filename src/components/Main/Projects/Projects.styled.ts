@@ -121,6 +121,16 @@ const StyledSwiperSlide = styled(SwiperSlide) <any>`
 const ProjectTab = styled.div`
   color: white;
   font-size: 30px;
+  animation: tabVisible 1s;
+
+  @keyframes tabVisible {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 const ProjectTabWrapper = styled.div`
