@@ -124,7 +124,10 @@
     },
     "contacts": {
         "title": "Contacts",
-        "description": "You can send your suggestions or wishes by filling out the form below. You can also write in instant messengers, which will also be listed below. And I will continue to make cool and user-friendly sites and applications.",
+        "description": {
+            "text": "Feedback",
+            "name": " Form"
+        },
         "form": {
             "title": "For feedback",
             "labelName": "Name",
