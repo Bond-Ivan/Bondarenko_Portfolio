@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: #0A0F14;
+        background-color: #111a24;
         font-family: "Handjet", sans-serif;
         /* font-family: "Shafarik", sans-serif;  */
 

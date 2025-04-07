@@ -2,8 +2,8 @@ import { ReactElement } from "react";
 import {
     ContactsContainer, ContactsSection, ContactsSociaItem,
     ContactsSocial, ContactsSocialLink, ContactsSocialText,
-    ContactsText, ContactsTitle, ContactsWrapper,
-    FormContainer, FormTitle
+    ContactsText, ContactsTextSpan, ContactsTitle, ContactsWrapper,
+    FormContainer, FormList, FormTitle
 } from "./Contacts.styled";
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
@@ -21,13 +21,16 @@ function Contacts(): ReactElement {
                     </ContactsTitle>
                     <ContactsWrapper>
                         <ContactsText>
-                            {t("contacts.description")}
+                            {t("contacts.description.text")}
+                            <ContactsTextSpan>
+                                {t("contacts.description.name")}
+                            </ContactsTextSpan>
                         </ContactsText>
                         <FormContainer>
                             <FormTitle>{t("contacts.form.title")}</FormTitle>
                             <ContactsForm />
                         </FormContainer>
-                        <ul>
+                        <FormList>
                             <ContactsSociaItem>
                                 <ContactsSocialLink href="https://github.com/Bond-Ivan?tab=repositories" target="_blank">
                                     <ContactsSocial xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16">
@@ -36,7 +39,7 @@ function Contacts(): ReactElement {
                                 </ContactsSocialLink>
                                 <ContactsSocialText>{t("socials.gitHub")}</ContactsSocialText>
                             </ContactsSociaItem>
-                        </ul>
+                        </FormList>
                     </ContactsWrapper>
                 </ContactsContainer>
             </ContactsSection>

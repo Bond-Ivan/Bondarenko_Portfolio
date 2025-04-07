@@ -62,7 +62,7 @@ const LanguageOptions = styled.div<LanguageArrowProps>`
   position: absolute;
   top: 70px;
   width: 100%;
-  background-color: #0A0F14;
+  background-color: #111a24;
   border: 3px solid black;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   border-radius: 20px;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ContactsSection = styled.section`
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 5px solid black;
+  border-bottom: 3px solid yellow;
 `;
 
 const ContactsContainer = styled.div`
@@ -31,7 +31,7 @@ const ContactsTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 4px 4px blackd9;
+  text-shadow: 4px 4px black;
 
   @media (max-width: 1040px) {
     font-size: 55px;
@@ -42,29 +42,39 @@ const ContactsTitle = styled.h2`
 `;
 
 const ContactsText = styled.p`
+  font-size: 45px;
+  text-align: center;
+  font-weight: 600;
   margin-bottom: 60px;
   max-width: 700px;
-  font-size: 20px;
   line-height: 35px;
   text-indent: 35px;
   color: ${(props) => props.theme.color};
-  @media (max-width: 768px) {
-    font-size: 18px;
+
+  @media (max-width: 950px) {
+    font-size: 35px;
   }
+`;
+
+const FormList = styled.ul`
+  margin-left: auto;
+`;
+
+const ContactsTextSpan = styled.span`
+  color: yellow;
 `;
 
 const FormContainer = styled.div`
   max-width: 700px;
-  margin-left: auto;
   margin-bottom: 50px;
   padding: 20px 15px;
   width: 100%;
   border: 5px solid black;
   background-color: transparent;
   border-radius: 35px 0 35px 0;
-  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
--moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
+  -webkit-box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
+  -moz-box-shadow: 4px 25px 10px 9px rgba(229, 255, 0, 0.38);
+  box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
 `;
 
 const FormTitle = styled.h3`
@@ -109,4 +119,6 @@ export {
   ContactsText,
   FormContainer,
   ContactsSociaItem,
+  ContactsTextSpan,
+  FormList,
 };

@@ -48,17 +48,8 @@ const FormItemInput = styled.input`
   border: 3px solid black;
   border-radius: 15px 0 15px 0;
   color: ${(props) => props.theme.color};
-  -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
--moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
   box-shadow: none;
   transition: box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
--moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.27);
-  }
 `;
 
 export {FormButton, FormItem, FormItemLabel, FormItemInput}

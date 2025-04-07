@@ -7,7 +7,7 @@ const InfoSection = styled.section`
   background-position: 80% bottom;
   background-size: 500px;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 5px solid black;
+  border-bottom: 3px solid yellow;
   @media (max-width: 1240px) {
     background-position: right bottom;
   }

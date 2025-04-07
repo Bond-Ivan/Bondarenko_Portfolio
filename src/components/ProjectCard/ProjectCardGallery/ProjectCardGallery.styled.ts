@@ -4,7 +4,7 @@ const ProjectCardGallerySection = styled.section`
   height: 100%;
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 5px solid black;
+  border-bottom: 3px solid yellow;
 `;
 
 const ProjectCardGalleryContainer = styled.div`
