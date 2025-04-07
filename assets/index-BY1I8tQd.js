@@ -759,6 +759,16 @@ Error generating stack: `+s.message+`
 `,Ti=R.div`
   color: white;
   font-size: 30px;
+  animation: tabVisible 1s;
+
+  @keyframes tabVisible {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `,kC=R.div`
   max-width: 58%;
 
@@ -894,8 +904,8 @@ Error generating stack: `+s.message+`
   background-color: transparent;
   border-radius: 35px 0 35px 0;
   -webkit-box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
-  -moz-box-shadow: 4px 25px 10px 9px rgba(229, 255, 0, 0.38);
-  box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
+  -moz-box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
+  box-shadow: 1px 1px 5px 1px rgba(229, 255, 0, 0.38);
 `;R.h3`
   margin-bottom: 35px;
   color: ${e=>e.theme.color};
