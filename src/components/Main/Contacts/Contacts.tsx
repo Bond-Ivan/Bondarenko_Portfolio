@@ -3,7 +3,7 @@ import {
     ContactsContainer, ContactsSection, ContactsSociaItem,
     ContactsSocial, ContactsSocialLink, ContactsSocialText,
     ContactsText, ContactsTextSpan, ContactsTitle, ContactsWrapper,
-    FormContainer, FormList, FormTitle
+    FormContainer, FormList
 } from "./Contacts.styled";
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
@@ -27,7 +27,6 @@ function Contacts(): ReactElement {
                             </ContactsTextSpan>
                         </ContactsText>
                         <FormContainer>
-                            <FormTitle>{t("contacts.form.title")}</FormTitle>
                             <ContactsForm />
                         </FormContainer>
                         <FormList>

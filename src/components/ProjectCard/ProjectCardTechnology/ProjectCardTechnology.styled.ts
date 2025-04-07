@@ -4,7 +4,7 @@ const ProjectCarTechnologydSection = styled.section`
   height: 100%;
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 3px solid yellow;
+  border-bottom: 2px solid yellow;
 `;
 
 const ProjectCardTechnologyContainer = styled.div`

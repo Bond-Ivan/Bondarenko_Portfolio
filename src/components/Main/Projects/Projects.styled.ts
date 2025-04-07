@@ -10,7 +10,7 @@ import BmPravo from '../../../../public/img/bmPravo-card.png';
 const ProjectsSection = styled.section`
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 3px solid yellow;
+  border-bottom: 2px solid yellow;
 `;
 const StyledProjectsSection = motion(ProjectsSection);
 

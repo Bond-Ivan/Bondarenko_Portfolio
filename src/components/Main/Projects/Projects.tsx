@@ -61,7 +61,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.firstItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        {t("projects.tab.button")}
+                                        <a href="https://bond-ivan.github.io/Advolatum/" target="_blank">
+                                            {t("projects.tab.button")}
+                                        </a>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                             {activeSlide === 1 &&
@@ -74,7 +76,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.secondItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        {t("projects.tab.button")}
+                                        <a href="https://bond-ivan.github.io/Prepare-a-sleigh/" target="_blank">
+                                            {t("projects.tab.button")}
+                                        </a>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                             {activeSlide === 2 &&
@@ -87,7 +91,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.thirdItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        {t("projects.tab.button")}
+                                        <a href="https://bond-ivan.github.io/Capico/" target="_blank">
+                                            {t("projects.tab.button")}
+                                        </a>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                             {activeSlide === 3 &&
@@ -100,12 +106,14 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.fourthItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        {t("projects.tab.button")}
+                                        <a href="https://bond-ivan.github.io/Cripto-Project/" target="_blank">
+                                            {t("projects.tab.button")}
+                                        </a>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                             {activeSlide === 4 &&
                                 <ProjectTab>
-                                     <ProjectTabTitle>
+                                    <ProjectTabTitle>
                                         {t("projects.tab.title.fifthItem.text")}
                                         <ProjectTabTitleSpan>{t("projects.tab.title.fifthItem.name")}</ProjectTabTitleSpan>
                                     </ProjectTabTitle>
@@ -113,7 +121,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.fifthItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        {t("projects.tab.button")}
+                                        <a href="https://bond-ivan.github.io/bm-pravo/" target="_blank">
+                                            {t("projects.tab.button")}
+                                        </a>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                         </ProjectTabWrapper>

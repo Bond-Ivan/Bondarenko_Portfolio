@@ -14,13 +14,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: #111a24;
+        background-color: #0a1017;
         font-family: "Handjet", sans-serif;
-        /* font-family: "Shafarik", sans-serif;  */
-
-
-        /* font-family: "Press Start 2P", sans-serif; */
-
     }
 
     a, a:link, a:visited  {

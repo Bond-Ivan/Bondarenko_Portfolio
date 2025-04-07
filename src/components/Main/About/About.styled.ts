@@ -4,7 +4,7 @@ import styled from "styled-components";
 const AboutSection = styled.section`
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 3px solid yellow;
+  border-bottom: 2px solid yellow;
 `;
 
 const AboutContainer = styled.div`
@@ -73,7 +73,6 @@ const AboutCard = styled.div`
 
 const AboutWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
