@@ -3,7 +3,6 @@ import styled from "styled-components";
 const ContactsSection = styled.section`
   position: relative;
   background-color: ${(props) => props.theme.background};
-  border-bottom: 2px solid yellow;
 `;
 
 const ContactsContainer = styled.div`
