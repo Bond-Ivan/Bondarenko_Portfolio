@@ -63,6 +63,7 @@ const ModalErrorContainer = styled.div`
 const ModalErrorText = styled.p`
   font-size: 20px;
   color: white;
+  font-family: "Handjet", sans-serif;
 
   @media (max-width: 768px) {
     font-size: 18px;

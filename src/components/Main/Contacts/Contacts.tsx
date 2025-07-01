@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import {
     ContactsContainer, ContactsSection, ContactsSociaItem,
     ContactsSocial, ContactsSocialLink, ContactsSocialText,
-    ContactsText, ContactsTextSpan, ContactsTitle, ContactsWrapper,
+    ContactsTitle, ContactsWrapper,
     FormContainer, FormList
 } from "./Contacts.styled";
 import { Element } from 'react-scroll';
@@ -20,12 +20,6 @@ function Contacts(): ReactElement {
                         {t("contacts.title")}
                     </ContactsTitle>
                     <ContactsWrapper>
-                        <ContactsText>
-                            {t("contacts.description.text")}
-                            <ContactsTextSpan>
-                                {t("contacts.description.name")}
-                            </ContactsTextSpan>
-                        </ContactsText>
                         <FormContainer>
                             <ContactsForm />
                         </FormContainer>

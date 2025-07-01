@@ -64,16 +64,14 @@ const ContactsTextSpan = styled.span`
 `;
 
 const FormContainer = styled.div`
+  border: 1px solid yellow;
   max-width: 700px;
   margin-bottom: 50px;
-  padding: 20px 15px;
+  background-color: #8080800a;
+  padding: 30px;
   width: 100%;
-  border: 5px solid black;
-  background-color: transparent;
-  border-radius: 35px 0 35px 0;
-  -webkit-box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
-  -moz-box-shadow: 4px 4px 10px 9px rgba(229, 255, 0, 0.38);
-  box-shadow: 1px 1px 5px 1px rgba(229, 255, 0, 0.38);
+  margin: 0 auto;
+  border-radius: 35px;
 `;
 
 const FormTitle = styled.h3`

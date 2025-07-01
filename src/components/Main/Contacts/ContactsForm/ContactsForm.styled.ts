@@ -5,20 +5,24 @@ interface FormButtonProps {
 }
 
 const FormButton = styled.button<FormButtonProps>`
+  border: 1px solid yellow;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  font-size: 18px;
+  -webkit-box-shadow: 4px 4px 25px 9px rgba(229, 255, 0, 0.38);
+  -moz-box-shadow: 4px 25px 59px 9px rgba(229, 255, 0, 0.38);
+  box-shadow: ${(props) => (props.$disabled ? 'none' : '4px 4px 25px 9px rgba(229, 255, 0, 0.38)')};
   margin: 0 auto;
-  padding: 10px 20px;
   display: flex;
-  border: 2px solid black;
   border-radius: 10px;
-  color: ${(props) => props.theme.color};
-  background-color: transparent;
+  color: black;
   scale: 1;
   transition: all 0.3s ease-in-out;
-  pointer-events: ${(props) => (props.$disabled ? 'none': 'all')};
+  pointer-events: ${(props) => (props.$disabled ? 'none' : 'all')};
+  background-color: ${(props) => (props.$disabled ? 'none' : 'yellow')};
   filter: ${(props) => (props.$disabled ? 'contrast(20%)' : 'contrast(1)')};
 
   &:hover {
-    background-color: black;
     scale: 1.1;
   }
 `;
@@ -45,11 +49,18 @@ const FormItemLabel = styled.label`
 
 const FormItemInput = styled.input`
   padding: 10px 15px;
-  border: 3px solid black;
-  border-radius: 15px 0 15px 0;
+  border: none;
+  border-bottom: 0.5px solid yellow;
   color: ${(props) => props.theme.color};
   box-shadow: none;
   transition: box-shadow 0.3s ease-in-out;
 `;
 
-export {FormButton, FormItem, FormItemLabel, FormItemInput}
+const FormIcon = styled.svg`
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 30px auto;
+  display: block;
+`;
+
+export { FormButton, FormItem, FormItemLabel, FormItemInput, FormIcon }

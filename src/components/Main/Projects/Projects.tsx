@@ -9,6 +9,7 @@ import {
     ProjectTabText,
     ProjectTabTitleSpan,
     ProjectTabWrapper,
+    ProjectTabLink,
 } from "./Projects.styled";
 
 import { Element } from 'react-scroll';
@@ -61,9 +62,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.firstItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        <a href="https://bond-ivan.github.io/Advolatum/" target="_blank">
+                                        <ProjectTabLink href="https://bond-ivan.github.io/Advolatum/" target="_blank">
                                             {t("projects.tab.button")}
-                                        </a>
+                                        </ProjectTabLink>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                             {activeSlide === 1 &&
@@ -76,9 +77,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.secondItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        <a href="https://bond-ivan.github.io/Prepare-a-sleigh/" target="_blank">
+                                        <ProjectTabLink href="https://bond-ivan.github.io/Prepare-a-sleigh/" target="_blank">
                                             {t("projects.tab.button")}
-                                        </a>
+                                        </ProjectTabLink>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                             {activeSlide === 2 &&
@@ -91,9 +92,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.thirdItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        <a href="https://bond-ivan.github.io/Capico/" target="_blank">
+                                        <ProjectTabLink href="https://bond-ivan.github.io/Capico/" target="_blank">
                                             {t("projects.tab.button")}
-                                        </a>
+                                        </ProjectTabLink>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                             {activeSlide === 3 &&
@@ -106,9 +107,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.fourthItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        <a href="https://bond-ivan.github.io/Cripto-Project/" target="_blank">
+                                        <ProjectTabLink href="https://bond-ivan.github.io/Cripto-Project/" target="_blank">
                                             {t("projects.tab.button")}
-                                        </a>
+                                        </ProjectTabLink>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                             {activeSlide === 4 &&
@@ -121,9 +122,9 @@ function Projects(): ReactElement {
                                         {t("projects.tab.text.fifthItem")}
                                     </ProjectTabText>
                                     <ProjectTabButton>
-                                        <a href="https://bond-ivan.github.io/bm-pravo/" target="_blank">
+                                        <ProjectTabLink href="https://bond-ivan.github.io/bm-pravo/" target="_blank">
                                             {t("projects.tab.button")}
-                                        </a>
+                                        </ProjectTabLink>
                                     </ProjectTabButton>
                                 </ProjectTab>}
                         </ProjectTabWrapper>

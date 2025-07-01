@@ -217,10 +217,15 @@ const ProjectTabButton = styled.button`
   }
 `;
 
+const ProjectTabLink = styled.a`
+  color: black;
+`;
+
 export {
   ProjectTab,
   ProjectTabTitle,
   ProjectTabText,
+  ProjectTabLink,
   ProjectTabTitleSpan,
   ProjectTabButton,
   SwiperProjects,
