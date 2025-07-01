@@ -125,8 +125,8 @@
     "contacts": {
         "title": "Contacts",
         "description": {
-            "text": "Feedback",
-            "name": " Form"
+            "text": "For",
+            "name": " Feedback"
         },
         "form": {
             "title": "For feedback",

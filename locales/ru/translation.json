@@ -133,7 +133,7 @@
     "contacts": {
         "title": "Контакты",
         "description": {
-            "text": "Форма обратной",
+            "text": "Для обратной",
             "name": " Связи"
         },
         "form": {
