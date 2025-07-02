@@ -4,8 +4,9 @@ import { useTranslation } from "react-i18next";
 import {
     InfoButton,
     InfoContainer, InfoDescription, InfoName, InfoSection,
-    InfoTitle
+    StyledInfoTitle
 } from "./Info.styled";
+import { animationInfo } from "../../../unitls/animation";
 
 function Info(): ReactElement {
     const { t } = useTranslation();
@@ -14,10 +15,15 @@ function Info(): ReactElement {
         <Element name="Home">
             <InfoSection>
                 <InfoContainer>
-                    <InfoTitle>
+                    <StyledInfoTitle
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ amount: 0.2, once: true }}
+                        variants={animationInfo}
+                    >
                         {t("info.title")}
                         <InfoName>{t("info.name")}</InfoName>
-                    </InfoTitle>
+                    </StyledInfoTitle>
                     <InfoDescription>
                         {t("info.description")}
                     </InfoDescription>

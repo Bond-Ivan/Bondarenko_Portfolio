@@ -24,6 +24,7 @@ const StackContainer = styled.div`
 const StackTitle = styled.h2`
   position: absolute;
   top: -40px;
+  border-radius: 50px;
   padding: 0 20px;
   background-color: ${(props) => props.theme.background};
   margin-bottom: 60px;

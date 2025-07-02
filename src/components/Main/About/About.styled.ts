@@ -22,6 +22,7 @@ const AboutContainer = styled.div`
 const AboutTitle = styled.h2`
   position: absolute;
   top: -20px;
+  border-radius: 50px;
   padding: 0 20px;
   color: ${(props) => props.theme.color};
   margin-bottom: 60px;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import infoPhoneImg from "../../../../public/img/qwe.png";
+import { motion } from "framer-motion";
 
 const InfoSection = styled.section`
   background-image: url(${infoPhoneImg});
@@ -84,6 +85,9 @@ const InfoTitle = styled.h1`
   }
 `;
 
+const StyledInfoTitle = motion(InfoTitle);
+
+
 const InfoName = styled.span`
   display: flex;
   filter: drop-shadow(12px 10px 30px rgba(255, 255, 0, 0.27));
@@ -115,7 +119,7 @@ const InfoDescription = styled.p`
 export {
   InfoSection,
   InfoContainer,
-  InfoTitle,
+  StyledInfoTitle,
   InfoDescription,
   InfoName,
   InfoButton,

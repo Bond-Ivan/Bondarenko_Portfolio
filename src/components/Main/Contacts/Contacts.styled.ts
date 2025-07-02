@@ -25,6 +25,7 @@ const ContactsWrapper = styled.div`
 const ContactsTitle = styled.h2`
   position: absolute;
   top: -40px;
+  border-radius: 50px;
   padding: 0 20px;
   background-color: ${(props) => props.theme.background};
   margin-bottom: 60px;
@@ -64,13 +65,12 @@ const ContactsTextSpan = styled.span`
 `;
 
 const FormContainer = styled.div`
-  border: 1px solid yellow;
-  max-width: 700px;
-  margin-bottom: 50px;
+  max-width: 600px;
   background-color: #8080800a;
-  padding: 30px;
+  padding: 25px;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 50px;
   border-radius: 35px;
 `;
 

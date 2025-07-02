@@ -25,6 +25,7 @@ const ActivityContainer = styled.div`
 const ActivityTitle = styled.h2`
   position: absolute;
   top: -40px;
+  border-radius: 50px;
   right: 18%;
   padding: 0 20px;
   background-color: ${(props) => props.theme.background};

@@ -28,6 +28,7 @@ const ProjectsContainer = styled.div`
 
 const ProjectsTitle = styled.h2`
   position: absolute;
+  border-radius: 50px;
   top: -40px;
   right: 18%;
   padding: 0 20px;

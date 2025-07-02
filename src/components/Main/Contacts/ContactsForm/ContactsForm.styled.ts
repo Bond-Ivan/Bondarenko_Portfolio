@@ -53,14 +53,28 @@ const FormItemInput = styled.input`
   border-bottom: 0.5px solid yellow;
   color: ${(props) => props.theme.color};
   box-shadow: none;
+  border-radius: none;
   transition: box-shadow 0.3s ease-in-out;
 `;
 
 const FormIcon = styled.svg`
   width: 70px;
   height: 70px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 20px auto;
   display: block;
-`;
+  transform-style: preserve-3d;
+  animation: floatUpDown 2s ease-in-out infinite;
 
+  @keyframes floatUpDown {
+    0% {
+      transform: translateY(-30) rotateX(10deg);
+    }
+    50% {
+      transform: translateY(-10px) rotateX(10deg);
+    }
+    100% {
+      transform: translateY(-30) rotateX(10deg);
+    }
+  }
+`;
 export { FormButton, FormItem, FormItemLabel, FormItemInput, FormIcon }
