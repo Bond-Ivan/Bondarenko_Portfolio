@@ -6,7 +6,6 @@ const ActivitySection = styled.section`
   background-color: ${(props) => props.theme.background};
   border-bottom: 2px solid yellow;
 `;
-const StyledActivitySection = motion(ActivitySection);
 
 const ActivityContainer = styled.div`
   overflow: hidden;
@@ -47,11 +46,13 @@ const ActivityTitle = styled.h2`
 
 const ActivityElem = styled.div`
   display: flex;
-  align-items: center;
-  position: relative;
+  flex-direction: column;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
 
   &:not(:last-child) {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   @media (max-width: 768px) {
@@ -59,22 +60,84 @@ const ActivityElem = styled.div`
   }
 `;
 
-const ActivityBox = styled.div`
-  max-width: 500px;
+const ActivityList = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ActivityTime = styled.p`
   z-index: 2;
-  width: 100%;
-  margin-right: 60px;
-  padding: 20px;
-  border-radius: 30px;
-  border: 5px solid black;
-  -webkit-box-shadow: 1px 1px 14px 1px rgba(229, 255, 0, 0.38);
-  -moz-box-shadow: 1px 1px 14px 1px rgba(229, 255, 0, 0.38);
-  box-shadow: 1px 1px 14px 1px rgba(229, 255, 0, 0.38);
-  scale: 1;
-  transition: scale 0.3s ease-in-out;
-  &:hover {
-    scale: 1.1;
+  font-size: 25px;
+  line-height: 30px;
+  color: ${(props) => props.theme.color};
+  @media (max-width: 1040px) {
+    font-size: 22px;
   }
+`;
+const StyledActivityTime = motion(ActivityTime);
+
+const ActivityCampanyLogo = styled.img`
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+`;
+
+const CompanyLink = styled.a`
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  color: rgba(255, 255, 255, .75);
+  font-size: 17px;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+`;
+
+const CompanyText = styled.p`
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: white;
+  line-height: 25px;
+`;
+
+const CompanyList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+`;
+
+const CompanyItem = styled.li`
+  background-color: rgba(45, 212, 191, .1);
+  color: yellow;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 17px;
+`;
+
+const AccordionTop = styled.button`
+  background-color: #ffffff14;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px 20px 0 0;
+  border: 1px solid #ffffff14;
+  border-bottom: none;
+  padding: 15px 30px;
+`;
+
+const AccordionBottom = styled.div<{ isOpen: boolean }>`
+  overflow: hidden;
+  max-height: ${({ isOpen }) => (isOpen ? "1000px" : "0")};
+  padding: ${({ isOpen }) => (isOpen ? "20px 20px 20px 20px" : "0 20px 0 20px")};
+  transition: all 0.5s ease;
+  background-color: #8080800f;
+  border-radius: 0 0 20px 20px;
+  border: 1px solid #ffff002e;
+    border-top: none;
 
   @media (max-width: 1040px) {
     max-width: 415px;
@@ -94,113 +157,25 @@ const ActivityBox = styled.div`
   }
 `;
 
-const ActivityList = styled.ul`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ActivityItemPost = styled.h3`
-  margin-bottom: 25px;
-  padding-bottom: 20px;
-  text-align: center;
-  font-size: 30px;
-  line-height: 30px;
-  color: yellow;
-  font-weight: 500;
-  letter-spacing: 2px;
-  border-bottom: 5px solid black;
-
-  @media (max-width: 1040px) {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
+const AccordionTitle = styled.h2`
     font-size: 25px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 28px;
-  }
-
-  @media (max-width: 576px) {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+    line-height: 30px;
+    color: #ffffff;
 `;
-
-const ActivityItemPlace = styled.p`
-  margin-bottom: 45px;
-  text-align: center;
-  font-size: 25px;
-  line-height: 30px;
-  color: white;
-  font-weight: 600;
-
-  @media (max-width: 1040px) {
-    margin-bottom: 35px;
-    font-size: 20px;
-  }
-`;
-
-const ActivityItemResponsibilities = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-const ActivityResponsibilitiesInner = styled.li`
-  position: relative;
-  padding-left: 30px;
-
-  &::before {
-    position: absolute;
-    left: -8px;
-    top: 50%;
-    content: "";
-    width: 23px;
-    height: 2px;
-    background-color: yellow;
-  }
-
-  @media (max-width: 576px) {
-    padding-left: 20px;
-    &::before {
-      left: -10px;
-      width: 16px;
-  }
-  }
-`;
-
-const ActivityItemResponsibility = styled.p`
-  font-size: 18px;
-  line-height: 30px;
-  color: white;
-  @media (max-width: 1040px) {
-    font-size: 16px;
-    line-height: 27px;
-  }
-`;
-
-const ActivityTime = styled.p`
-  z-index: 2;
-  font-size: 25px;
-  line-height: 30px;
-  color: ${(props) => props.theme.color};
-  @media (max-width: 1040px) {
-    font-size: 22px;
-  }
-`;
-const StyledActivityTime = motion(ActivityTime);
 
 export {
-  StyledActivitySection,
+  ActivitySection,
+  AccordionTitle,
   ActivityContainer,
+  CompanyLink,
+  AccordionTop,
   ActivityTitle,
   ActivityElem,
-  ActivityBox,
+  CompanyText,
+  AccordionBottom,
   ActivityList,
-  ActivityItemPost,
-  ActivityItemPlace,
-  ActivityItemResponsibilities,
-  ActivityResponsibilitiesInner,
-  ActivityItemResponsibility,
+  CompanyItem,
+  CompanyList,
+  ActivityCampanyLogo,
   StyledActivityTime,
 };

@@ -1,135 +1,55 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import {
-    ActivityBox, StyledActivitySection as ActivitySection, ActivityElem,
-    ActivityItemPlace, ActivityItemPost, ActivityItemResponsibilities,
-    ActivityItemResponsibility, ActivityList, ActivityResponsibilitiesInner,
-    StyledActivityTime as ActivityTime, ActivityTitle, ActivityContainer
+    AccordionBottom, ActivitySection, ActivityElem,
+    ActivityList, StyledActivityTime as ActivityTime, ActivityTitle, ActivityContainer,
+    ActivityCampanyLogo, CompanyLink,
+    CompanyText,
+    CompanyItem,
+    CompanyList,
+    AccordionTop,
+    AccordionTitle
 } from "./Activity.styled";
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
 import { animationActivity } from "../../../unitls/animation";
+import accordionElems from "../../../unitls/constants/accordion";
 
 function Activity(): ReactElement {
     const { t } = useTranslation();
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    const toggleAccordion = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
     return (
         <Element name="Activity">
-            <ActivitySection
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.2, once: true }}
-            >
+            <ActivitySection>
                 <ActivityContainer>
-                    <ActivityTitle>
-                        {t("activity.title")}
-                    </ActivityTitle>
-                    <div>
-                        <ActivityElem>
-                            <ActivityBox>
+                    <ActivityTitle>{t("activity.title")}</ActivityTitle>
+                    {accordionElems.map((item, index) => (
+                        <ActivityElem key={index}>
+                            <AccordionTop onClick={() => toggleAccordion(index)} aria-expanded={openIndex === index}>
+                                <AccordionTitle>{item.title}</AccordionTitle>
+                                <ActivityTime variants={animationActivity} custom={index + 1.5}>
+                                    {t(`activity.${item.timeKey}`)}
+                                </ActivityTime>
+                            </AccordionTop>
+                            <AccordionBottom isOpen={openIndex === index}>
                                 <ActivityList>
-                                    <li>
-                                        <ActivityItemPost>
-                                            {t("activity.firstItem.place")}
-                                        </ActivityItemPost>
-                                    </li>
-                                    <li>
-                                        <ActivityItemPlace>
-                                               {t("activity.firstItem.position")}
-                                        </ActivityItemPlace>
-                                    </li>
-                                    <li>
-                                        <ActivityItemResponsibilities>
-                                            <ActivityResponsibilitiesInner>
-                                                <ActivityItemResponsibility>
-                                                    {t("activity.firstItem.duty1")}
-                                                </ActivityItemResponsibility>
-                                            </ActivityResponsibilitiesInner>
-                                            <ActivityResponsibilitiesInner>
-                                                <ActivityItemResponsibility>
-                                                    {t("activity.firstItem.duty2")}
-                                                </ActivityItemResponsibility>
-                                            </ActivityResponsibilitiesInner>
-                                            <ActivityResponsibilitiesInner>
-                                                <ActivityItemResponsibility>
-                                                    {t("activity.firstItem.duty3")}
-                                                </ActivityItemResponsibility>
-                                            </ActivityResponsibilitiesInner>
-                                            <ActivityResponsibilitiesInner>
-                                                <ActivityItemResponsibility>
-                                                    {t("activity.firstItem.duty4")}
-                                                </ActivityItemResponsibility>
-                                            </ActivityResponsibilitiesInner>
-                                        </ActivityItemResponsibilities>
-                                    </li>
+                                    <ActivityCampanyLogo src={item.logo} alt={item.alt} />
+                                    <CompanyLink href={item.link}>
+                                        {item.svg}
+                                        {item.linkText}
+                                    </CompanyLink>
+                                    <CompanyText>{item.description}</CompanyText>
+                                    <CompanyList>
+                                        {item.skills.map((skill, i) => <CompanyItem key={i}>{skill}</CompanyItem>)}
+                                    </CompanyList>
                                 </ActivityList>
-                            </ActivityBox>
-                            <ActivityTime variants={animationActivity} custom={1.5}>{t("activity.firstItem.time")}</ActivityTime>
+                            </AccordionBottom>
                         </ActivityElem>
-
-                        <ActivityElem>
-                            <ActivityBox>
-                                <ActivityList>
-                                    <li>
-                                        <ActivityItemPost>
-                                            {t("activity.secondItem.place")}
-                                        </ActivityItemPost>
-                                    </li>
-                                    <li>
-                                        <ActivityItemPlace>
-                                            {t("activity.secondItem.position")}
-                                        </ActivityItemPlace>
-                                    </li>
-                                    <li>
-                                        <ActivityItemResponsibilities>
-                                            <ActivityResponsibilitiesInner>
-                                                <ActivityItemResponsibility>
-                                                    {t("activity.secondItem.duty1")}
-                                                </ActivityItemResponsibility>
-                                            </ActivityResponsibilitiesInner>
-                                            <ActivityResponsibilitiesInner>
-                                                <ActivityItemResponsibility>
-                                                    {t("activity.secondItem.duty2")}
-                                                </ActivityItemResponsibility>
-                                            </ActivityResponsibilitiesInner>
-                                            <ActivityResponsibilitiesInner>
-                                                <ActivityItemResponsibility>
-                                                    {t("activity.secondItem.duty3")}
-                                                </ActivityItemResponsibility>
-                                            </ActivityResponsibilitiesInner>
-                                        </ActivityItemResponsibilities>
-                                    </li>
-                                </ActivityList>
-                            </ActivityBox>
-                            <ActivityTime variants={animationActivity} custom={2.5}>{t("activity.secondItem.time")}</ActivityTime>
-                        </ActivityElem>
-
-                        <ActivityElem>
-                            <ActivityBox>
-                                <ActivityList>
-                                    <li>
-                                        <ActivityItemPost>
-                                            {t("activity.thirdItem.place")}
-                                        </ActivityItemPost>
-                                    </li>
-                                    <li>
-                                        <ActivityItemPlace>
-                                            {t("activity.thirdItem.position")}
-                                        </ActivityItemPlace>
-                                    </li>
-                                    <li>
-                                        <ActivityItemResponsibilities>
-                                            <ActivityResponsibilitiesInner>
-                                                <ActivityItemResponsibility>
-                                                    {t("activity.thirdItem.duty1")}
-                                                </ActivityItemResponsibility>
-                                            </ActivityResponsibilitiesInner>
-                                        </ActivityItemResponsibilities>
-                                    </li>
-                                </ActivityList>
-                            </ActivityBox>
-                            <ActivityTime variants={animationActivity} custom={3.5}>{t("activity.thirdItem.time")}</ActivityTime>
-                        </ActivityElem>
-                    </div>
+                    ))}
                 </ActivityContainer>
             </ActivitySection>
         </Element>
