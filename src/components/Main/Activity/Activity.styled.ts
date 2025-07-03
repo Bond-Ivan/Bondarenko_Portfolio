@@ -73,6 +73,10 @@ const ActivityTime = styled.p`
   @media (max-width: 1040px) {
     font-size: 22px;
   }
+
+  @media (max-width: 768px) {
+      font-size: 20px;
+  }
 `;
 const StyledActivityTime = motion(ActivityTime);
 
@@ -127,6 +131,19 @@ const AccordionTop = styled.button`
   border: 1px solid #ffffff14;
   border-bottom: none;
   padding: 15px 30px;
+
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 5px 10px;
+  }
+
+  @media (max-width: 420px) {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
 `;
 
 const AccordionBottom = styled.div<{ isOpen: boolean }>`
@@ -137,11 +154,7 @@ const AccordionBottom = styled.div<{ isOpen: boolean }>`
   background-color: #8080800f;
   border-radius: 0 0 20px 20px;
   border: 1px solid #ffff002e;
-    border-top: none;
-
-  @media (max-width: 1040px) {
-    max-width: 415px;
-  }
+  border-top: none;
 
   @media (max-width: 768px) {
     margin-right: 0;
@@ -161,6 +174,11 @@ const AccordionTitle = styled.h2`
     font-size: 25px;
     line-height: 30px;
     color: #ffffff;
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
 `;
 
 export {
