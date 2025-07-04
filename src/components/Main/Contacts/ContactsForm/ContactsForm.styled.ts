@@ -77,4 +77,19 @@ const FormIcon = styled.svg`
     }
   }
 `;
-export { FormButton, FormItem, FormItemLabel, FormItemInput, FormIcon }
+
+const ContactsDescription = styled.p`
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 60px;
+  max-width: 700px;
+  line-height: 25px;
+  text-indent: 35px;
+  color: white;
+
+  @media (max-width: 950px) {
+    font-size: 13px;
+  }
+`;
+export { FormButton, ContactsDescription, FormItem, FormItemLabel, FormItemInput, FormIcon }

@@ -32,7 +32,7 @@ const ActivityTitle = styled.h2`
   margin-bottom: 60px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
-  text-shadow: 4px 4px blackd9;
+  text-shadow: 4px 4px black;
 
   @media (max-width: 1040px) {
     font-size: 55px;
@@ -57,6 +57,9 @@ const ActivityElem = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 `;
 
@@ -123,6 +126,7 @@ const CompanyItem = styled.li`
 `;
 
 const AccordionTop = styled.button`
+  position: relative;
   background-color: #ffffff14;
   display: flex;
   align-items: center;
@@ -130,17 +134,18 @@ const AccordionTop = styled.button`
   border-radius: 20px 20px 0 0;
   border: 1px solid #ffffff14;
   border-bottom: none;
-  padding: 15px 30px;
+  padding: 15px 50px 15px 30px;
+
 
   @media (max-width: 768px) {
-    padding: 10px 20px;
+    padding: 10px 45px 10px 20px;
   }
 
   @media (max-width: 576px) {
-    padding: 5px 10px;
+    padding: 5px 25px 5px 10px;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 430px) {
     flex-direction: column-reverse;
     gap: 10px;
   }
@@ -150,15 +155,13 @@ const AccordionBottom = styled.div<{ isOpen: boolean }>`
   overflow: hidden;
   max-height: ${({ isOpen }) => (isOpen ? "1000px" : "0")};
   padding: ${({ isOpen }) => (isOpen ? "20px 20px 20px 20px" : "0 20px 0 20px")};
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
   background-color: #8080800f;
   border-radius: 0 0 20px 20px;
   border: 1px solid #ffff002e;
   border-top: none;
 
   @media (max-width: 768px) {
-    margin-right: 0;
-    margin-bottom: 15px;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -181,6 +184,30 @@ const AccordionTitle = styled.h2`
     }
 `;
 
+const AccordionButtonIcon = styled.svg<{ isOpen: boolean }>`
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+  transform: ${({ isOpen }) => (isOpen ? "rotate(180deg)" : "rotate(0deg)")};
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+
+  @media (max-width: 576px) {
+    width: 20px;
+  height: 20px;
+  right: 2px;
+  bottom: 12px;
+  }
+
+  @media (max-width: 430px) {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    bottom: 25px;
+  }
+`;
+
 export {
   ActivitySection,
   AccordionTitle,
@@ -188,6 +215,7 @@ export {
   CompanyLink,
   AccordionTop,
   ActivityTitle,
+  AccordionButtonIcon,
   ActivityElem,
   CompanyText,
   AccordionBottom,

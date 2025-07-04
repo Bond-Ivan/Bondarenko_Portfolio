@@ -45,7 +45,7 @@ const ContactsText = styled.p`
   font-size: 45px;
   text-align: center;
   font-weight: 600;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   max-width: 700px;
   line-height: 35px;
   text-indent: 35px;

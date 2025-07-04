@@ -1,6 +1,6 @@
 import { send } from "emailjs-com";
 import { ReactElement, useEffect, useRef, useState } from "react";
-import { FormItem, FormItemLabel, FormItemInput, FormButton, FormIcon } from "./ContactsForm.styled";
+import { FormItem, FormItemLabel, FormItemInput, FormButton, FormIcon, ContactsDescription } from "./ContactsForm.styled";
 import LoaderContacts from "../../../Loader/LoaderContacts";
 import ModalSuccess from "../../../Modals/ModalSuccess";
 import { useTranslation } from "react-i18next";
@@ -103,6 +103,7 @@ function ContactsForm(): ReactElement {
                         {t("contacts.description.name")}
                     </ContactsTextSpan>
                 </ContactsText>
+                <ContactsDescription>{t("contacts.text")}</ContactsDescription>
                 <FormItem>
                     <FormItemLabel>{t("contacts.form.labelName")}</FormItemLabel>
                     <FormItemInput
