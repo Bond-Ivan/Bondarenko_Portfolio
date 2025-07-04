@@ -13,30 +13,7 @@
         "secondDescription": "In addition, I am constantly striving for self-development and exploring new trends in web development in order to stay on the cutting edge of technology. My goal is to create not only functional, but also aesthetically pleasing solutions that meet the needs of users and customers."
     },
     "activity": {
-        "title": "Experience",
-        "firstItem": {
-            "position": "Frontend Developer",
-            "place": "Raiffeisenbank",
-            "duty1": "Creating new components and refining existing ones on React and TypeScript",
-            "duty2": "Working with metrics",
-            "duty3": "Writing e2e tests",
-            "duty4": "Layout of HMTL emails",
-            "time": "01.04.2024 - Today"
-        },
-        "secondItem": {
-            "position": "QA Engineer",
-            "place": "Банк ДОМ РФ",
-            "duty1": "Manual testing",
-            "duty2": "Creating test cases",
-            "duty3": "Testing the Frontend part of the platform",
-            "time": "01.02.2024 - 01.04.2024"
-        },
-        "thirdItem": {
-            "position": "SQL Tutor",
-            "place": "Freelance",
-            "duty1": "Completing coursework and various SQL tasks",
-            "time": "22.09.2022 - 22.09.2023"
-        }
+        "title": "Experience"
     },
     "stack": {
         "title": "My Stack",
@@ -128,6 +105,7 @@
             "text": "For",
             "name": " Feedback"
         },
+        "text": "If you have any questions or want to work together, write to me",
         "form": {
             "title": "For feedback",
             "labelName": "Name",
@@ -155,5 +133,20 @@
     "socials": {
         "gitHub": "GitHub"
     },
-    "theme": "Toggle Theme"
+    "theme": "Toggle Theme",
+    "raiffeisen": {
+        "position": "Frontend Developer",
+        "time": "01.04.2024 - Today",
+        "description": "Created interfaces using React and TypeScript, worked on optimization, bug fixing, and backend integration for smooth operation."
+    },
+    "domRf": {
+        "position": "QA Engineer",
+        "time": "01.02.2024 - 01.04.2024",
+        "description": "Performed manual testing, developed test scenarios. Writing test cases."
+    },
+    "tutorSQL": {
+        "position": "SQL Tutor",
+        "time": "22.09.2022 - 22.09.2023",
+        "description": "Completion of laboratory and coursework assignments of varying complexity using the SQL query language"
+    }
 }
