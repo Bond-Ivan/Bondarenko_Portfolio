@@ -490,7 +490,7 @@ Error generating stack: `+s.message+`
   }
 `,pP=ai(bx),hP=M(bx)`
   font-size: 19px;
-  font-weight: 200;
+  font-weight: 400;
   color: yellow;
 `,mP=M.img`
   width: 120px;
