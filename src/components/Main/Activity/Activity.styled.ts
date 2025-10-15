@@ -111,7 +111,7 @@ const StyledActivityTime = motion(ActivityTime);
 
 const ActivityTimeAll = styled(ActivityTime)`
   font-size: 19px;
-  font-weight: 200;
+  font-weight: 400;
   color: yellow;
 `;
 
