@@ -21,6 +21,12 @@ const ActivityContainer = styled.div`
   }
 `;
 
+const AccordionBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const ActivityTitle = styled.h2`
   position: absolute;
   top: -40px;
@@ -29,7 +35,7 @@ const ActivityTitle = styled.h2`
   padding: 0 20px;
   background-color: ${(props) => props.theme.background};
   text-align: end;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   font-size: 60px;
   color: ${(props) => props.theme.color};
   text-shadow: 4px 4px black;
@@ -42,6 +48,25 @@ const ActivityTitle = styled.h2`
     font-size: 40px;
     top: -30px;
   }
+`;
+
+const ActivityTotalTime = styled.p`
+  font-size: 30px;
+  color: white;
+  margin-bottom: 60px;
+
+  @media (max-width: 1040px) {
+    font-size: 23px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
+
+const ActivityTotalTimeSpan = styled.span`
+  color: yellow;
+  filter: drop-shadow(12px 10px 30px rgba(255, 255, 0, 0.27));
 `;
 
 const ActivityElem = styled.div`
@@ -81,7 +106,14 @@ const ActivityTime = styled.p`
       font-size: 20px;
   }
 `;
+
 const StyledActivityTime = motion(ActivityTime);
+
+const ActivityTimeAll = styled(ActivityTime)`
+  font-size: 19px;
+  font-weight: 200;
+  color: yellow;
+`;
 
 const ActivityCampanyLogo = styled.img`
   width: 120px;
@@ -147,7 +179,7 @@ const AccordionTop = styled.button`
 
   @media (max-width: 430px) {
     flex-direction: column-reverse;
-    gap: 10px;
+    gap: 15px;
   }
 `;
 
@@ -214,13 +246,17 @@ export {
   ActivityContainer,
   CompanyLink,
   AccordionTop,
+  ActivityTotalTimeSpan,
   ActivityTitle,
+  ActivityTotalTime,
   AccordionButtonIcon,
   ActivityElem,
   CompanyText,
+  ActivityTimeAll,
   AccordionBottom,
   ActivityList,
   CompanyItem,
+  AccordionBox,
   CompanyList,
   ActivityCampanyLogo,
   StyledActivityTime,

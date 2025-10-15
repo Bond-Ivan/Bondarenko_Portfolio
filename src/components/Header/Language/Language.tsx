@@ -1,4 +1,4 @@
-import { ReactElement, SetStateAction, useState } from "react";
+import { ReactElement, SetStateAction, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { LanguageArrow, LanguageContainer, LanguageInput, LanguageOption, LanguageOptions } from "./Languages.styled";
@@ -8,6 +8,7 @@ function Language(): ReactElement {
 
     const [active, setActive] = useState(false);
     const [selected, setSelected] = useState(localStorage.getItem('i18nextLng') || 'ru');
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     const toggleDropdown = () => {
         setActive(!active);
@@ -22,8 +23,29 @@ function Language(): ReactElement {
         localStorage.setItem('i18nextLng', language);
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setActive(false);
+            }
+        };
+    
+        const handleEscape = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                setActive(false);
+            }
+        };
+    
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("keydown", handleEscape);
+    
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("keydown", handleEscape);
+        };
+    }, []);
     return (
-        <LanguageContainer>
+        <LanguageContainer ref={dropdownRef}>
             <LanguageInput
                 type="text"
                 value={selected}

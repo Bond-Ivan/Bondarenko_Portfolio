@@ -5,7 +5,6 @@ import GlobalStyles from './Glopal.styled';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './Themes/Themes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ProjectCard from './components/ProjectCard/ProjectCard';
 import ScrollToTop from './unitls/components/ScrollTop';
 
 function App(): ReactElement {
@@ -23,7 +22,6 @@ function App(): ReactElement {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/ProjectCard/:projectId" element={<ProjectCard />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>

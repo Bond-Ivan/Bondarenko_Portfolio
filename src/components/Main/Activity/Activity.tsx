@@ -8,17 +8,23 @@ import {
     CompanyList,
     AccordionTop,
     AccordionTitle,
-    AccordionButtonIcon
+    AccordionButtonIcon,
+    AccordionBox,
+    ActivityTimeAll,
+    ActivityTotalTime,
+    ActivityTotalTimeSpan
 } from "./Activity.styled";
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
 import { animationActivity } from "../../../unitls/animation";
 import accordionElems from "../../../unitls/constants/accordion";
+import { getExperienceDuration, getTotalExperience } from "./Activity.utils";
 
 function Activity(): ReactElement {
     const { t } = useTranslation();
     const [openIndex, setOpenIndex] = useState<number | null>(0);
-
+    const totalExperience = getTotalExperience(t);
+    
     const toggleAccordion = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
@@ -28,13 +34,19 @@ function Activity(): ReactElement {
             <ActivitySection>
                 <ActivityContainer>
                     <ActivityTitle>{t("activity.title")}</ActivityTitle>
+                    <ActivityTotalTime>{t("activity.totalTime")}  <ActivityTotalTimeSpan>{totalExperience}</ActivityTotalTimeSpan></ActivityTotalTime>
                     {accordionElems.map((item, index) => (
                         <ActivityElem key={index}>
                             <AccordionTop onClick={() => toggleAccordion(index)} aria-expanded={openIndex === index}>
                                 <AccordionTitle>{t(item.title)}</AccordionTitle>
-                                <ActivityTime variants={animationActivity} custom={index + 1.5}>
-                                    {t(item.timeKey)}
-                                </ActivityTime>
+                                <AccordionBox>
+                                    <ActivityTime variants={animationActivity} custom={index + 1.5}>
+                                        {t(item.timeKey)}
+                                    </ActivityTime>
+                                    <ActivityTimeAll>
+                                    ({getExperienceDuration(t(item.timeKey))})
+                                    </ActivityTimeAll>
+                                </AccordionBox>
                                 <AccordionButtonIcon
                                     isOpen={openIndex === index}
                                     viewBox="0 0 24 24"

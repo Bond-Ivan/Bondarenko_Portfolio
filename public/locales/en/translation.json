@@ -13,7 +13,8 @@
         "secondDescription": "In addition, I am constantly striving for self-development and exploring new trends in web development in order to stay on the cutting edge of technology. My goal is to create not only functional, but also aesthetically pleasing solutions that meet the needs of users and customers."
     },
     "activity": {
-        "title": "Experience"
+        "title": "Experience",
+        "totalTime": "Суммарный опыт работы:  "
     },
     "stack": {
         "title": "My Stack",
@@ -136,7 +137,7 @@
     "theme": "Toggle Theme",
     "raiffeisen": {
         "position": "Frontend Developer",
-        "time": "01.04.2024 - Today",
+        "time": "01.04.2024 - Now",
         "description": "Created interfaces using React and TypeScript, worked on optimization, bug fixing, and backend integration for smooth operation."
     },
     "domRf": {
