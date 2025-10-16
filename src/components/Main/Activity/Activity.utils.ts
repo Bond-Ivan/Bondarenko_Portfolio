@@ -21,12 +21,13 @@ export const getExperienceDuration = (dateRange: string): string => {
         months += 12;
     }
 
-    if (years === 1 && months === 0) {
-        return "1 год";
-    }
+    const yearText = years > 0 
+        ? `${years} ${years === 1 ? "год" : years < 5 ? "года" : "лет"}` 
+        : "";
 
-    const yearText = years > 0 ? `${years} ${years === 1 ? "год" : "года"}` : "";
-    const monthText = months > 0 ? `${months} ${months === 1 ? "месяц" : "месяца"}` : "";
+    const monthText = months > 0 
+        ? `${months} ${getMonthDeclension(months)}` 
+        : "";
 
     if (years > 0 && months > 0) {
         return `${yearText} ${monthText}`;
@@ -37,6 +38,16 @@ export const getExperienceDuration = (dateRange: string): string => {
     }
 
     return "";
+};
+
+const getMonthDeclension = (months: number): string => {
+    if (months % 10 === 1 && months % 100 !== 11) {
+        return "месяц";
+    } else if ([2, 3, 4].includes(months % 10) && ![12, 13, 14].includes(months % 100)) {
+        return "месяца";
+    } else {
+        return "месяцев";
+    }
 };
 
 export const getTotalExperience = (t: TFunction): string => {
@@ -62,8 +73,13 @@ export const getTotalExperience = (t: TFunction): string => {
     const years = Math.floor(totalMonths / 12);
     const months = totalMonths % 12;
 
-    const yearText = years > 0 ? `${years} ${years === 1 ? "год" : "года"}` : "";
-    const monthText = months > 0 ? `${months} ${months === 1 ? "месяц" : "месяца"}` : "";
+    const yearText = years > 0 
+        ? `${years} ${years === 1 ? "год" : years < 5 ? "года" : "лет"}` 
+        : "";
+
+    const monthText = months > 0 
+        ? `${months} ${getMonthDeclension(months)}` 
+        : "";
 
     if (years > 0 && months > 0) {
         return `${yearText} ${monthText}`;
