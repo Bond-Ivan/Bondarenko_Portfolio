@@ -147,12 +147,12 @@
     },
     "domRf": {
         "position": "QA Engineer",
-        "time": "01.02.2024 - 01.03.2024",
+        "time": "07.02.2024 - 26.03.2024",
         "description": "Conducted manual testing of the web product: I wrote and updated test cases, maintained a simple coverage matrix, checked functionality using checklists, and fixed bugs. I also participated in regression testing before releases."
     },
     "frontendDeveloper": {
         "position": "Frontend Developer",
-        "time": "01.06.2022 - 22.09.2023",
+        "time": "01.05.2022 - 22.09.2023",
         "description": "Responsive and cross-browser layout of Figma interfaces: semantic HTML5, SCSS/CSS Modules, Grid/Flex, pixel-perfect; support for the UI kit, basic integration with React/TS, and optimization for loading (lazy/code splitting)"
     }
 }
