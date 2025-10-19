@@ -111,7 +111,12 @@
             "title": "For feedback",
             "labelName": "Name",
             "labelEmail": "Email",
-            "labelMessage": "Message"
+            "labelMessage": "Message",
+            "placeholder": {
+                "name": "Ivanov Ivan",
+                "email": "example@gmail.com",
+                "message": "The text of your message"
+            }
         }
     },
     "sideBar": {
@@ -138,16 +143,16 @@
     "raiffeisen": {
         "position": "Frontend Developer",
         "time": "01.04.2024 - Now",
-        "description": "Created interfaces using React and TypeScript, worked on optimization, bug fixing, and backend integration for smooth operation."
+        "description": "Developed the frontend of a banking application using React/TypeScript: complex forms, dynamic interfaces, and responsive layout; API integration and UI kit support. Improved performance and reliability through refactoring, unit/E2E tests, and code review."
     },
     "domRf": {
         "position": "QA Engineer",
-        "time": "01.02.2024 - 01.04.2024",
-        "description": "Performed manual testing, developed test scenarios. Writing test cases."
+        "time": "01.02.2024 - 01.03.2024",
+        "description": "Conducted manual testing of the web product: I wrote and updated test cases, maintained a simple coverage matrix, checked functionality using checklists, and fixed bugs. I also participated in regression testing before releases."
     },
-    "tutorSQL": {
-        "position": "SQL Tutor",
-        "time": "22.09.2022 - 22.09.2023",
-        "description": "Completion of laboratory and coursework assignments of varying complexity using the SQL query language"
+    "frontendDeveloper": {
+        "position": "Frontend Developer",
+        "time": "01.06.2022 - 22.09.2023",
+        "description": "Responsive and cross-browser layout of Figma interfaces: semantic HTML5, SCSS/CSS Modules, Grid/Flex, pixel-perfect; support for the UI kit, basic integration with React/TS, and optimization for loading (lazy/code splitting)"
     }
 }

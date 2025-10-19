@@ -1,6 +1,6 @@
 import Raiffeisenbank from "../../../public/img/raiffeisenbank_logo.png";
 import Domrf from "../../../public/img/domrfbank_logo.png";
-import Gubkin from "../../../public/img/gubkin_logo.png";
+import Frontend from "../../../public/img/frontend_logo.png";
 
 const accordionElems = [{
     title: "raiffeisen.position",
@@ -23,13 +23,13 @@ const accordionElems = [{
     skills: ["Postman", "SQL", "DevTools", "Bugzilla"]
 },
 {
-    title: "tutorSQL.position",
-    timeKey: "tutorSQL.time",
-    logo: Gubkin,
-    alt: "Логотип Губкинского университета",
+    title: "frontendDeveloper.position",
+    timeKey: "frontendDeveloper.time",
+    logo: Frontend,
+    alt: "Логотип Фронтенд разработчика",
     link: "https://bond-ivan.github.io/Bondarenko_Portfolio/",
     linkText: "Bond-Ivan",
-    description: "tutorSQL.description",
+    description: "frontendDeveloper.description",
     skills: ["SQL", "Oracle", "DBeaver"]
 }]
 

@@ -109,7 +109,7 @@ function ContactsForm(): ReactElement {
                     <FormItemInput
                         type="text"
                         name="from_name"
-                        placeholder="Ivan Bondarenko"
+                        placeholder={t("contacts.form.placeholder.name")}
                         value={toSend.from_name}
                         onChange={handleChange}
                     />
@@ -119,7 +119,7 @@ function ContactsForm(): ReactElement {
                     <FormItemInput
                         type="email"
                         name="email"
-                        placeholder="bond@gmail.com"
+                        placeholder={t("contacts.form.placeholder.email")}
                         value={toSend.email}
                         onChange={handleChange}
                     />
@@ -130,7 +130,7 @@ function ContactsForm(): ReactElement {
                         type="text"
                         id="message"
                         name="message"
-                        placeholder="message"
+                        placeholder={t("contacts.form.placeholder.message")}
                         value={toSend.message}
                         onChange={handleChange}
                     />

@@ -183,10 +183,10 @@ const AccordionTop = styled.button`
   }
 `;
 
-const AccordionBottom = styled.div<{ isOpen: boolean }>`
+const AccordionBottom = styled.div<{ $isOpenItem: boolean }>`
   overflow: hidden;
-  max-height: ${({ isOpen }) => (isOpen ? "1000px" : "0")};
-  padding: ${({ isOpen }) => (isOpen ? "20px 20px 20px 20px" : "0 20px 0 20px")};
+  max-height: ${({ $isOpenItem }) => ($isOpenItem ? "1000px" : "0")};
+  padding: ${({ $isOpenItem }) => ($isOpenItem ? "20px 20px 20px 20px" : "0 20px 0 20px")};
   transition: all 0.7s ease;
   background-color: #8080800f;
   border-radius: 0 0 20px 20px;
@@ -216,11 +216,11 @@ const AccordionTitle = styled.h2`
     }
 `;
 
-const AccordionButtonIcon = styled.svg<{ isOpen: boolean }>`
+const AccordionButtonIcon = styled.svg<{ $isOpenItem: boolean }>`
   width: 25px;
   height: 25px;
   transition: transform 0.3s ease;
-  transform: ${({ isOpen }) => (isOpen ? "rotate(180deg)" : "rotate(0deg)")};
+  transform: ${({ $isOpenItem }) => ($isOpenItem ? "rotate(180deg)" : "rotate(0deg)")};
   position: absolute;
   right: 10px;
   bottom: 20px;
