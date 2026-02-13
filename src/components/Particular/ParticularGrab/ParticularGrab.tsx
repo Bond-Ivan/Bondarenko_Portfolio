@@ -11,27 +11,16 @@ interface ParticularProps {
 const ParticlesBackgroundGrab = ({ id }: ParticularProps) => {
   const [init, setInit] = useState(false);
 
-  // Проверка на мобилку (ширина меньше 768px)
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" ? window.innerWidth < 768 : false
-  );
+  // Проверяем наличие тач-скрина (самый надежный способ определить мобилку/планшет)
+  const isTouchDevice = typeof window !== "undefined" && 
+    ('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
-  // Слушатель ресайза, чтобы динамически отключать/включать эффекты
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    
-    // Инициализация движка
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
       setInit(true);
     });
-
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
@@ -42,17 +31,17 @@ const ParticlesBackgroundGrab = ({ id }: ParticularProps) => {
     () => ({
       fullScreen: { enable: false },
       background: {
-        color: { value: "transparent" }, // Оставляем прозрачным, чтобы видеть твой градиент
+        color: { value: "transparent" },
       },
       fpsLimit: 120,
       interactivity: {
         events: {
           onHover: {
-            // Если мобилка — выключаем hover полностью
-            enable: !isMobile, 
+            // ОТКЛЮЧАЕМ ТОЛЬКО ЗДЕСЬ
+            enable: !isTouchDevice, 
             mode: "grab",
             parallax: {
-              enable: !isMobile, // Выключаем параллакс на мобилках
+              enable: !isTouchDevice, 
               force: 60, 
               smooth: 10,
             },
@@ -84,8 +73,7 @@ const ParticlesBackgroundGrab = ({ id }: ParticularProps) => {
         },
         number: {
           density: { enable: true, area: 800 },
-          // Уменьшаем количество частиц на мобилках для оптимизации
-          value: isMobile ? 40 : 100, 
+          value: 100, // ВЕРНУЛ 100 КАК БЫЛО
         },
         opacity: { value: 0.5 },
         shape: { type: "circle" },
@@ -93,7 +81,7 @@ const ParticlesBackgroundGrab = ({ id }: ParticularProps) => {
       },
       detectRetina: true,
     }),
-    [isMobile] // Пересобираем конфиг при изменении размера экрана
+    [isTouchDevice]
   );
 
   if (init) {
