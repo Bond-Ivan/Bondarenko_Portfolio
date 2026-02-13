@@ -8,7 +8,7 @@ const FormButton = styled.button<FormButtonProps>`
   border: 1px solid yellow;
   letter-spacing: 1px;
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: 12px;
   -webkit-box-shadow: 4px 4px 25px 9px rgba(229, 255, 0, 0.38);
   -moz-box-shadow: 4px 25px 59px 9px rgba(229, 255, 0, 0.38);
   box-shadow: ${(props) => (props.$disabled ? 'none' : '4px 4px 25px 9px rgba(229, 255, 0, 0.38)')};
@@ -40,21 +40,30 @@ const FormItem = styled.div`
 
 const FormItemLabel = styled.label`
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 16px;
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
-    font-size: 18px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 12px;
   }
 `;
 
 const FormItemInput = styled.input`
-  padding: 10px 15px;
+  padding: 6px 4px;
   border: none;
-  border-bottom: 0.5px solid yellow;
+  font-size: 12px;
+  border-bottom: 0.5px solid #ffff0045;
   color: ${(props) => props.theme.color};
   box-shadow: none;
   border-radius: none;
   transition: box-shadow 0.3s ease-in-out;
+
+  @media (max-width: 1040px) {
+    font-size: 10px;
+  }
 `;
 
 const FormIcon = styled.svg`
@@ -79,7 +88,7 @@ const FormIcon = styled.svg`
 `;
 
 const ContactsDescription = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   font-weight: 600;
   margin-bottom: 60px;

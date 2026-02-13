@@ -7,6 +7,7 @@ import {
     StyledInfoTitle
 } from "./Info.styled";
 import { animationInfo } from "../../../unitls/animation";
+import ParticlesBackgroundGrab from "../../Particular/ParticularGrab";
 
 function Info(): ReactElement {
     const { t } = useTranslation();
@@ -14,6 +15,7 @@ function Info(): ReactElement {
     return (
         <Element name="Home">
             <InfoSection>
+                <ParticlesBackgroundGrab id="particles-info"/>
                 <InfoContainer>
                     <StyledInfoTitle
                         initial="hidden"

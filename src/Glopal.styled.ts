@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         background-color: #0a1017;
-        font-family: "Handjet", sans-serif;
+        font-family: "Unbounded", sans-serif;
     }
 
     a, a:link, a:visited  {

@@ -8,6 +8,7 @@ import {
 import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
 import ContactsForm from "./ContactsForm/ContactsForm";
+import ParticlesBackground from "../../Particular/ParticularGrab";
 
 function Contacts(): ReactElement {
     const { t } = useTranslation();
@@ -15,6 +16,8 @@ function Contacts(): ReactElement {
     return (
         <Element name="contacts">
             <ContactsSection>
+                <ParticlesBackground id="particles-contacts"/>
+
                 <ContactsContainer>
                     <ContactsTitle>
                         {t("contacts.title")}

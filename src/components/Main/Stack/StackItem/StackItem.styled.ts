@@ -17,10 +17,14 @@ const StackItem = styled.li`
 const StyledStackItem = motion(StackItem);
 
 const StackItemTitle = styled.h4`
-  font-size: 20px;
+  font-size: 15px;
   color: yellow;
   @media (max-width: 1040px) {
-    font-size: 18px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 12px;
   }
 `;
 

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const ContactsSection = styled.section`
   position: relative;
-  background-color: ${(props) => props.theme.background};
 `;
 
 const ContactsContainer = styled.div`
@@ -29,20 +28,27 @@ const ContactsTitle = styled.h2`
   padding: 0 20px;
   background-color: ${(props) => props.theme.background};
   margin-bottom: 60px;
-  font-size: 60px;
+  font-size: 40px;
   color: ${(props) => props.theme.color};
   text-shadow: 4px 4px black;
 
   @media (max-width: 1040px) {
-    font-size: 55px;
+    font-size: 30px;
+    line-height: 38px;
+    top: -20px;
   }
+
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 15px;
   }
 `;
 
 const ContactsText = styled.p`
-  font-size: 45px;
+  font-size: 35px;
   text-align: center;
   font-weight: 600;
   margin-bottom: 30px;
@@ -51,8 +57,12 @@ const ContactsText = styled.p`
   text-indent: 35px;
   color: ${(props) => props.theme.color};
 
-  @media (max-width: 950px) {
-    font-size: 35px;
+  @media (max-width: 1040px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 16px;
   }
 `;
 
@@ -66,7 +76,7 @@ const ContactsTextSpan = styled.span`
 
 const FormContainer = styled.div`
   max-width: 600px;
-  background-color: #8080800a;
+  background: radial-gradient(circle at 0% 0%, #1a2332 0%, #0a1017 50%);
   padding: 25px;
   width: 100%;
   margin: 0 auto;
@@ -94,6 +104,7 @@ const ContactsSocial = styled.svg`
 `;
 
 const ContactsSociaItem = styled.li`
+  text-align: center;
   &:hover ${ContactsSocial} {
     scale: 1.2;
   }
@@ -102,6 +113,21 @@ const ContactsSociaItem = styled.li`
 const ContactsSocialText = styled.p`
   font-size: 20px;
   color: white;
+  @media (max-width: 1040px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 12px;
+  }
 `;
 
 export {

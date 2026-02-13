@@ -19,6 +19,7 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import Swiper from "swiper";
+import ParticlesBackgroundGrab from "../../Particular/ParticularGrab";
 
 function Projects(): ReactElement {
     const { t } = useTranslation();
@@ -35,6 +36,7 @@ function Projects(): ReactElement {
                 whileInView="visible"
                 viewport={{ amount: 0.2, once: true }}
             >
+                <ParticlesBackgroundGrab id="particles-projects" />
                 <ProjectsContainer>
                     <ProjectsTitle>{t("projects.title")}</ProjectsTitle>
                     <ProjectsWrapper>

@@ -19,6 +19,7 @@ import { useTranslation } from "react-i18next";
 import { animationActivity } from "../../../unitls/animation";
 import accordionElems from "../../../unitls/constants/accordion";
 import { getExperienceDuration, getTotalExperience } from "./Activity.utils";
+import ParticlesBackgroundGrab from "../../Particular/ParticularGrab";
 
 function Activity(): ReactElement {
     const { t } = useTranslation();
@@ -32,6 +33,7 @@ function Activity(): ReactElement {
     return (
         <Element name="Activity">
             <ActivitySection>
+                <ParticlesBackgroundGrab id="particles-activity" />
                 <ActivityContainer>
                     <ActivityTitle>{t("activity.title")}</ActivityTitle>
                     <ActivityTotalTime>{t("activity.totalTime")}  <ActivityTotalTimeSpan>{totalExperience}</ActivityTotalTimeSpan></ActivityTotalTime>

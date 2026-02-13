@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { send } from "emailjs-com";
 import { ReactElement, useEffect, useRef, useState } from "react";
 import { FormItem, FormItemLabel, FormItemInput, FormButton, FormIcon, ContactsDescription } from "./ContactsForm.styled";

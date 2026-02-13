@@ -3,12 +3,12 @@ import infoPhoneImg from "../../../../public/img/qwe.png";
 import { motion } from "framer-motion";
 
 const InfoSection = styled.section`
+  position: relative;
   background-image: url(${infoPhoneImg});
   background-repeat: no-repeat;
   background-position: 80% bottom;
   background-size: 500px;
-  background-color: ${(props) => props.theme.background};
-  border-bottom: 2px solid yellow;
+  border-bottom: 1px solid #ffff0045;
   @media (max-width: 1240px) {
     background-position: right bottom;
   }
@@ -55,7 +55,7 @@ const InfoButton = styled.button`
   background-color: yellow;
   letter-spacing: 1px;
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: 12px;
   -webkit-box-shadow: 4px 4px 25px 9px rgba(229, 255, 0, 0.38);
   -moz-box-shadow: 4px 25px 59px 9px rgba(229, 255, 0, 0.38);
   box-shadow: 4px 4px 25px 9px rgba(229, 255, 0, 0.38);
@@ -69,19 +69,24 @@ const InfoButton = styled.button`
 
 const InfoTitle = styled.h1`
   margin-bottom: 50px;
-  font-weight: 700;
-  line-height: 90px;
-  font-size: 100px;
+  font-weight: 500;
+  line-height: 80px;
+  font-size: 70px;
   color: ${(props) => props.theme.color};
   text-shadow: 5px 5px black;
   @media (max-width: 1040px) {
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 55px;
+    line-height: 70px;
     margin-bottom: 40px;
   }
   @media (max-width: 768px) {
     font-size: 45px;
     line-height: 60px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 30px;
+    line-height: 45px;
   }
 `;
 
@@ -96,8 +101,9 @@ const InfoName = styled.span`
 
 const InfoDescription = styled.p`
   max-width: 550px;
-  line-height: 40px;
-  font-size: 25px;
+  line-height: 35px;
+  font-size: 20px;
+  font-weight: 300;
   margin-bottom: 60px;
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
@@ -107,12 +113,16 @@ const InfoDescription = styled.p`
 
   @media (max-width: 768px) {
     font-size: 20px;
-    max-width: 400px;
   }
 
   @media (max-width: 768px) {
-    line-height: 35px;
-    max-width: 300px;
+    line-height: 30px;
+    max-width: 350px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 17px;
+    line-height: 30px;
   }
 `;
 

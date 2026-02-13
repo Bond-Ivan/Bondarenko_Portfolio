@@ -9,8 +9,7 @@ import BmPravo from '../../../../public/img/bmPravo-card.png';
 
 const ProjectsSection = styled.section`
   position: relative;
-  background-color: ${(props) => props.theme.background};
-  border-bottom: 2px solid yellow;
+  border-bottom: 1px solid #ffff0045;
 `;
 const StyledProjectsSection = motion(ProjectsSection);
 
@@ -35,15 +34,22 @@ const ProjectsTitle = styled.h2`
   background-color: ${(props) => props.theme.background};
   text-align: end;
   margin-bottom: 60px;
-  font-size: 60px;
+  font-size: 40px;
   color: ${(props) => props.theme.color};
   text-shadow: 4px 4px blackd9;
 
   @media (max-width: 1040px) {
-    font-size: 55px;
+    font-size: 30px;
+    line-height: 38px;
+    top: -20px;
   }
+
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 15px;
   }
 `;
 
@@ -81,8 +87,16 @@ const SwiperProjects = styled(Swiper)`
       margin-left: auto;
       margin-bottom: 30px;
     }
+
+    @media (max-width: 420px) {
+      width: 200px;
+      height: 280px;
+      margin-left: inherit;
+      margin-bottom: 30px;
+    }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const StyledSwiperSlide = styled(SwiperSlide) <any>`
   display: flex;
   align-items: center;
@@ -162,19 +176,19 @@ const ProjectsWrapper = styled.div`
 
 const ProjectTabTitle = styled.h2`
   margin-bottom: 30px;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 600;
 
-  @media (max-width: 1240px) {
-    font-size: 40px;
-  }
-
-  @media (max-width: 950px) {
-    font-size: 35px;
+  @media (max-width: 1014px) {
+    font-size: 25px;
   }
 
   @media (max-width: 768px) {
-      text-align: center;
+    text-align: center;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 20px;
   }
 `;
 
@@ -185,14 +199,12 @@ const ProjectTabTitleSpan = styled.span`
 const ProjectTabText = styled.p`
   margin-bottom: 50px;
   text-indent: 40px;
-  font-size: 25px;
-
-  @media (max-width: 950px) {
-    font-size: 25px;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 18px;
+  font-size: 16px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media (max-width: 420px) {
+    font-size: 12px;
   }
 `;
 
@@ -206,7 +218,7 @@ const ProjectTabButton = styled.button`
   background-color: yellow;
   letter-spacing: 1px;
   padding: 10px 15px;
-  font-size: 18px;
+  font-size: 12px;
   -webkit-box-shadow: 4px 4px 25px 9px rgba(229, 255, 0, 0.38);
   -moz-box-shadow: 4px 25px 59px 9px rgba(229, 255, 0, 0.38);
   box-shadow: 4px 4px 25px 9px rgba(229, 255, 0, 0.38);

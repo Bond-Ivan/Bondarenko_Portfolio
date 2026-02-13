@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 const ActivitySection = styled.section`
   position: relative;
-  background-color: ${(props) => props.theme.background};
-  border-bottom: 2px solid yellow;
+  border-bottom: 1px solid #ffff0045;
 `;
 
 const ActivityContainer = styled.div`
@@ -36,17 +35,23 @@ const ActivityTitle = styled.h2`
   background-color: ${(props) => props.theme.background};
   text-align: end;
   margin-bottom: 20px;
-  font-size: 60px;
+  font-size: 40px;
   color: ${(props) => props.theme.color};
   text-shadow: 4px 4px black;
 
   @media (max-width: 1040px) {
-    font-size: 55px;
+    font-size: 30px;
+    line-height: 38px;
+    top: -20px;
+
   }
 
   @media (max-width: 768px) {
-    font-size: 40px;
-    top: -30px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 15px;
   }
 `;
 
@@ -54,9 +59,10 @@ const ActivityTotalTime = styled.p`
   font-size: 30px;
   color: white;
   margin-bottom: 60px;
+  text-align: center;
 
   @media (max-width: 1040px) {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   @media (max-width: 768px) {
@@ -91,28 +97,9 @@ const ActivityElem = styled.div`
 const ActivityList = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-const ActivityTime = styled.p`
-  z-index: 2;
-  font-size: 25px;
-  line-height: 30px;
-  color: ${(props) => props.theme.color};
-  @media (max-width: 1040px) {
-    font-size: 22px;
+  @media (max-width: 420px) {
+    align-items: center;
   }
-
-  @media (max-width: 768px) {
-      font-size: 20px;
-  }
-`;
-
-const StyledActivityTime = motion(ActivityTime);
-
-const ActivityTimeAll = styled(ActivityTime)`
-  font-size: 19px;
-  font-weight: 400;
-  color: yellow;
 `;
 
 const ActivityCampanyLogo = styled.img`
@@ -141,6 +128,18 @@ const CompanyText = styled.p`
   font-size: 20px;
   color: white;
   line-height: 25px;
+
+  @media (max-width: 1040px) {
+  font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
 `;
 
 const CompanyList = styled.ul`
@@ -154,12 +153,20 @@ const CompanyItem = styled.li`
   color: yellow;
   padding: 6px 10px;
   border-radius: 10px;
-  font-size: 17px;
+  font-size: 14px;
+
+  @media (max-width: 1040px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 10px;
+  }
 `;
 
 const AccordionTop = styled.button`
   position: relative;
-  background-color: #ffffff14;
+  background: radial-gradient(circle at 50% -20%, #141a22 0%, #0a1017 80%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -173,13 +180,13 @@ const AccordionTop = styled.button`
     padding: 10px 45px 10px 20px;
   }
 
-  @media (max-width: 576px) {
-    padding: 5px 25px 5px 10px;
+  @media (max-width: 700px) {
+    flex-direction: column-reverse;
+    gap: 20px;
   }
 
-  @media (max-width: 430px) {
-    flex-direction: column-reverse;
-    gap: 15px;
+  @media (max-width: 576px) {
+    padding: 5px 25px 5px 10px;
   }
 `;
 
@@ -188,7 +195,7 @@ const AccordionBottom = styled.div<{ $isOpenItem: boolean }>`
   max-height: ${({ $isOpenItem }) => ($isOpenItem ? "1000px" : "0")};
   padding: ${({ $isOpenItem }) => ($isOpenItem ? "20px 20px 20px 20px" : "0 20px 0 20px")};
   transition: all 0.7s ease;
-  background-color: #8080800f;
+  background: radial-gradient(circle at 50% -20%, #0e161f 0%, #0a1017 80%);
   border-radius: 0 0 20px 20px;
   border: 1px solid #ffff002e;
   border-top: none;
@@ -206,15 +213,38 @@ const AccordionBottom = styled.div<{ $isOpenItem: boolean }>`
 `;
 
 const AccordionTitle = styled.h2`
-    font-size: 25px;
+    font-size: 20px;
     line-height: 30px;
     color: #ffffff;
     font-weight: 600;
-
-    @media (max-width: 768px) {
-      font-size: 20px;
+    @media (max-width: 1040px) {
+      font-size: 16px;
     }
 `;
+
+const ActivityTime = styled.p`
+  z-index: 2;
+  font-size: 18px;
+  line-height: 30px;
+  color: ${(props) => props.theme.color};
+
+  @media (max-width: 1040px) {
+    font-size: 16px;
+  }
+`;
+
+const StyledActivityTime = motion(ActivityTime);
+
+const ActivityTimeAll = styled(ActivityTime)`
+  font-size: 16px;
+  font-weight: 400;
+  color: yellow;
+
+  @media (max-width: 1040px) {
+    font-size: 14px;
+  }
+`;
+
 
 const AccordionButtonIcon = styled.svg<{ $isOpenItem: boolean }>`
   width: 25px;
@@ -224,6 +254,10 @@ const AccordionButtonIcon = styled.svg<{ $isOpenItem: boolean }>`
   position: absolute;
   right: 10px;
   bottom: 20px;
+
+  @media (max-width: 700px) {
+    bottom: 50px;
+  }
 
   @media (max-width: 576px) {
     width: 20px;

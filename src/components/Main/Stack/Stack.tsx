@@ -9,6 +9,7 @@ import { Element } from 'react-scroll';
 import { useTranslation } from "react-i18next";
 import StackItem from "./StackItem";
 import IStackItem from "./StackItem/StackItem.types";
+import ParticlesBackground from "../../Particular/ParticularGrab/ParticularGrab";
 
 function Stack(): ReactElement {
     const { t } = useTranslation();
@@ -137,6 +138,7 @@ function Stack(): ReactElement {
                 whileInView="visible"
                 viewport={{ amount: 0.4, once: true }}
             >
+                <ParticlesBackground id="particles-stack"/>
                 <StackContainer>
                     <StackTitle>
                         {t("stack.title")}

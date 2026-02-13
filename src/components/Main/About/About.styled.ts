@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 const AboutSection = styled.section`
   position: relative;
-  background-color: ${(props) => props.theme.background};
-  border-bottom: 2px solid yellow;
+  border-bottom: 1px solid #ffff0045;
 `;
 
 const AboutContainer = styled.div`
@@ -26,30 +25,39 @@ const AboutTitle = styled.h2`
   padding: 0 20px;
   color: ${(props) => props.theme.color};
   margin-bottom: 60px;
-  font-size: 60px;
+  font-size: 40px;
   background-color: ${(props) => props.theme.background};
   text-shadow: 4px 4px black;
   @media (max-width: 1040px) {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 38px;
   }
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 15px;
   }
 `;
 
 const AboutDescription = styled.p`
-  max-width: 800px;
-  font-size: 20px;
-  line-height: 30px;
+  max-width: 650px;
+  font-size: 16px;
+  line-height: 26px;
   text-indent: 35px;
   color: ${(props) => props.theme.color};
 
   &:first-of-type {
     margin-bottom: 10px;
   }
-  @media (max-width: 768px) {
-    font-size: 16px;
+
+  @media (max-width: 1040px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 12px;
   }
 `;
 const StyledAboutDescription = motion(AboutDescription);
@@ -66,9 +74,13 @@ const AboutCard = styled.div`
     }
 
     @media (max-width: 768px) {
-      width: 80%;
+      width: 50%;
       margin: 0 auto;
-      height: 170px;
+      height: 320px;
+    }
+
+    @media (max-width: 430px) {
+      width: 80%;
     }
 `;
 
@@ -77,6 +89,65 @@ const AboutWrapper = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
+  }
+`;
+
+const CardText = styled.div`
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background-color: #0a10178c;
+  padding: 5px;
+`;
+
+const CardTitle = styled.h3`
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 15px;
+  }
+`;
+
+const CardDescription = styled.p`
+  font-size: 15px;
+  color: yellow;
+  margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 11px;
+  }
+`;
+
+const CardList = styled.ul`
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+
+  li {
+    width: 16px;
+    scale: 1;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+    scale: 1.6;
+    }
   }
 `;
 
@@ -104,14 +175,14 @@ const AboutCardBox = styled.div`
 const AboutInner = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 70px;
+  padding: 0 0 0 55px;
   max-width: 800px;
   @media (max-width: 1040px) {
-    padding: 0 0 0 50px;
+    padding: 0 0 0 45px;
   }
 
   @media (max-width: 768px) {
-    padding: 0 0 30px 0;
+    padding: 0 0 25px 0;
   }
 `;
 
@@ -119,7 +190,10 @@ const AboutCardImage = styled.img`
     border-radius: 10px;
     object-fit: cover;
     height: 100%;
-    border: 2px solid yellow;
+    -webkit-box-shadow: 5px 3px 18px 5px rgba(0, 0, 0, 0.74);
+    -moz-box-shadow: 5px 3px 18px 5px rgba(0, 0, 0, 0.74);
+    box-shadow: 5px 3px 18px 5px rgba(0, 0, 0, 0.74);
+    border: 1px solid black;
     border-radius: 10px;
 
     @media (max-width: 768px) {
@@ -128,13 +202,19 @@ const AboutCardImage = styled.img`
 `;
 
 const AboutBoxTitle = styled.h2`
-    font-size: 45px;
+    font-size: 35px;
     color: white;
     font-weight: 600;
     margin-bottom: 35px;
-
+    @media (max-width: 1040px) {
+      font-size: 25px;
+    }
     @media (max-width: 768px) {
-      font-size: 40px;
+      font-size: 25px;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 20px;
     }
 `;
 
@@ -143,4 +223,4 @@ const AboutBoxSpan = styled.span`
   color: yellow;
 `;
 
-export { AboutSection, AboutBoxSpan, AboutBoxTitle, AboutInner, AboutWrapper, AboutCardImage, AboutCardBox, AboutCardInner, AboutContainer, AboutTitle, StyledAboutDescription, AboutCard };
+export { AboutSection, CardList, CardDescription, CardTitle, CardText, AboutBoxSpan, AboutBoxTitle, AboutInner, AboutWrapper, AboutCardImage, AboutCardBox, AboutCardInner, AboutContainer, AboutTitle, StyledAboutDescription, AboutCard };

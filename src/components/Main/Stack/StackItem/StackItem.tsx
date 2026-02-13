@@ -14,6 +14,6 @@ function StackItem({ custom, title, attributes, iconContent }: IStackItem): Reac
             </StackItemTitle>
         </StyledStackItem>
     )
-};
+}
 
 export default StackItem;

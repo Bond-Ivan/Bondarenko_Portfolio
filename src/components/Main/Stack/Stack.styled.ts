@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 const StackSection = styled.section`
   position: relative;
-  background-color: ${(props) => props.theme.background};
-  border-bottom: 2px solid yellow;
+  border-bottom: 1px solid #ffff0045;
 `;
 const StyledStackSection = motion(StackSection);
 
@@ -28,15 +27,21 @@ const StackTitle = styled.h2`
   padding: 0 20px;
   background-color: ${(props) => props.theme.background};
   margin-bottom: 60px;
-  font-size: 60px;
+  font-size: 40px;
   color: ${(props) => props.theme.color};
   text-shadow: 4px 4px blackd9;
   @media (max-width: 1040px) {
-    font-size: 55px;
+    font-size: 30px;
+    line-height: 38px;
+    top: -20px;
   }
 
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 20px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 15px;
   }
 `;
 
@@ -52,16 +57,24 @@ const StackInner = styled.div`
 
 const StackContentTitle = styled.h3`
   margin-bottom: 30px;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 600;
   color: ${(props) => props.theme.color};
   @media (max-width: 1040px) {
-    font-size: 32px;
+    font-size: 25px;
   }
 
   @media (max-width: 768px) {
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 25px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 18px;
   }
 `;
 
