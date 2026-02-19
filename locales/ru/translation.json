@@ -151,7 +151,9 @@
         "error": "Упс, произошла ошибка с сервером, данные не отправлены"
     },
     "socials": {
-        "gitHub": "GitHub"
+        "gitHub": "GitHub",
+        "telegram": "Telegram",
+        "email": "Email"
     },
     "theme": "Сменить тему",
     "raiffeisen": {
