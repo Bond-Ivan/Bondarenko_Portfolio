@@ -105,6 +105,10 @@ Error generating stack: `+s.message+`
   position: relative;
   width: 100px;
   height: 50px;
+
+  @media (max-width: 768px) {
+    height: 30px;
+  }
 `,IC=R.input`
   position: absolute;
   top: 0;
@@ -147,6 +151,7 @@ Error generating stack: `+s.message+`
   pointer-events: none;
   @media (max-width: 768px) {
     right: 40px;
+    top: ${t=>(t.$active,"10px")};
   }
 `,AC=R.div`
   position: absolute;
@@ -161,10 +166,10 @@ Error generating stack: `+s.message+`
   opacity: ${t=>t.$active?1:0};
   transition: opacity 0.3s ease-in-out;
   -webkit-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.07);
-    -moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.07);
+  -moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.07);
     box-shadow: 3px 0px 10px 8px rgba(255, 255, 255, 0.07);
   @media (max-width: 768px) {
-    top: 65px;
+    top: 45px;
   }
 `,o0=R.div`
   border-bottom: 2px solid black;
