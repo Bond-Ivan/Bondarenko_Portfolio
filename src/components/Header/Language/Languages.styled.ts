@@ -8,6 +8,10 @@ const LanguageContainer = styled.div`
   position: relative;
   width: 100px;
   height: 50px;
+
+  @media (max-width: 768px) {
+    height: 30px;
+  }
 `;
 
 const LanguageInput = styled.input`
@@ -55,6 +59,7 @@ const LanguageArrow = styled.div<LanguageArrowProps>`
   pointer-events: none;
   @media (max-width: 768px) {
     right: 40px;
+    top: ${(props) => (props.$active ? "10px" : "10px")};
   }
 `;
 
@@ -74,7 +79,7 @@ const LanguageOptions = styled.div<LanguageArrowProps>`
     -moz-box-shadow: 4px 4px 42px 20px rgba(255, 255, 255, 0.07);
     box-shadow: 3px 0px 10px 8px rgba(255, 255, 255, 0.07);
   @media (max-width: 768px) {
-    top: 65px;
+    top: 45px;
   }
 `;
 
