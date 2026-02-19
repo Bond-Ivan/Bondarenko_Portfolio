@@ -19,7 +19,7 @@ const HeaderContainer = styled.header`
 
 const HeaderWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 `;
 
 const ToggleSwitchContainer = styled.div`

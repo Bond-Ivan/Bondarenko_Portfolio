@@ -16,7 +16,7 @@ function Contacts(): ReactElement {
     return (
         <Element name="contacts">
             <ContactsSection>
-                <ParticlesBackground id="particles-contacts"/>
+                <ParticlesBackground id="particles-contacts" />
 
                 <ContactsContainer>
                     <ContactsTitle>
@@ -34,6 +34,24 @@ function Contacts(): ReactElement {
                                     </ContactsSocial>
                                 </ContactsSocialLink>
                                 <ContactsSocialText>{t("socials.gitHub")}</ContactsSocialText>
+                            </ContactsSociaItem>
+                            <ContactsSociaItem>
+                                <ContactsSocialLink href="https://t.me/frontendeeer" target="_blank">
+                                    <ContactsSocial xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                                        <title>Telegram SVG Icon</title>
+                                        <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" d="M40.83 8.48c1.14 0 2 1 1.54 2.86l-5.58 26.3c-.39 1.87-1.52 2.32-3.08 1.45L20.4 29.26a.4.4 0 0 1 0-.65l15.37-13.88c.7-.62-.15-.92-1.07-.36L15.41 26.54a.46.46 0 0 1-.4.05L6.82 24C5 23.47 5 22.22 7.23 21.33L40 8.69a2.2 2.2 0 0 1 .83-.21" />
+                                    </ContactsSocial>
+                                </ContactsSocialLink>
+                                <ContactsSocialText>{t("socials.telegram")}</ContactsSocialText>
+                            </ContactsSociaItem>
+                            <ContactsSociaItem>
+                                <ContactsSocialLink href="mailto:bond.code@yandex.ru" target="_blank">
+                                    <ContactsSocial xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                        <title>Email SVG Icon</title>
+                                        <path fill="#ffffff" d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-2.2 2L16 14.78L6.2 8ZM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24Z" />
+                                    </ContactsSocial>
+                                </ContactsSocialLink>
+                                <ContactsSocialText>{t("socials.email")}</ContactsSocialText>
                             </ContactsSociaItem>
                         </FormList>
                     </ContactsWrapper>

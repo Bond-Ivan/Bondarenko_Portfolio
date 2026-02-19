@@ -14,7 +14,7 @@ const InfoSection = styled.section`
   }
 
   @media (max-width: 1040px) {
-    background-size: 380px;
+    background-size: 350px;
   }
 
   @media (max-width: 768px) {
@@ -22,7 +22,7 @@ const InfoSection = styled.section`
   }
 
   @media (max-width: 576px) {
-    background-size: 280px;
+    background-size: 180px;
   }
 `;
 

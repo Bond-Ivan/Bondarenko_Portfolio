@@ -137,7 +137,9 @@
         "error": "Oops, there was a server error, data not sent"
     },
     "socials": {
-        "gitHub": "GitHub"
+        "gitHub": "GitHub",
+        "telegram": "Telegram",
+        "email": "Email"
     },
     "theme": "Toggle Theme",
     "raiffeisen": {

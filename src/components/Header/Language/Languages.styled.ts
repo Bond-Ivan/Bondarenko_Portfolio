@@ -19,7 +19,7 @@ const LanguageInput = styled.input`
   cursor: pointer;
   background-color: transparent;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 24.75px;
   letter-spacing: -0.03em;
   text-align: left;
@@ -34,7 +34,7 @@ const LanguageInput = styled.input`
     color: yellow;
   }
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 `;
 
@@ -79,11 +79,12 @@ const LanguageOptions = styled.div<LanguageArrowProps>`
 `;
 
 const LanguageOption = styled.div`
-  font-size: 25px;
-  line-height: 29.75px;
+  border-bottom: 2px solid black;
+  font-size: 19px;
+  cursor: pointer;
   letter-spacing: -0.01em;
   text-align: center;
-  padding: 12px 20px;
+  padding: 10px 5px;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -94,7 +95,7 @@ const LanguageOption = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 22px;
+    font-size: 15px;
   }
 `;
 

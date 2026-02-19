@@ -67,7 +67,9 @@ const ContactsText = styled.p`
 `;
 
 const FormList = styled.ul`
-  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
 `;
 
 const ContactsTextSpan = styled.span`
@@ -80,7 +82,7 @@ const FormContainer = styled.div`
   padding: 25px;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   border-radius: 35px;
 `;
 
@@ -97,10 +99,25 @@ const ContactsSocialLink = styled.a`
 `;
 
 const ContactsSocial = styled.svg`
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   scale: 1;
   transition: all 0.3s ease-in-out;
+
+  @media (max-width: 1040px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    width: 35px;
+    height: 35px;
+  }
+
+  @media (max-width: 440px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const ContactsSociaItem = styled.li`
@@ -111,22 +128,22 @@ const ContactsSociaItem = styled.li`
 `;
 
 const ContactsSocialText = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   @media (max-width: 1040px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 768px) {
     font-size: 16px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 576px) {
     font-size: 12px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 10px;
   }
 `;
 
